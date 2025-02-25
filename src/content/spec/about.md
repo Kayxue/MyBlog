@@ -1,4 +1,28 @@
 # About
-This is the demo site for [Fuwari](https://github.com/saicaca/fuwari).
-## Github Repo
+
+## 關於作者
+* 一個資工系大學生
+* 寫程式超級爛
+* 社恐
+* INTP
+
+## 興趣
+* 寫程式
+* 音遊
+* 心理
+* 我不知道惹～～
+
+## 過去
+- 國小不知為何對 Scratch 有興趣
+- 國一被老師推薦加入程式設計菁英班學 C 語言 ~~（但後來學一點就直跨 C++ 並開摸物件導向）~~
+- 高中
+    - 資訊課和自主學習碰了基礎 C#、Python、Java、JavaScript、TypeScript
+    - 以不同程式語言亂做過 Discord Bot，但除了第一次做的有開放邀請，其餘皆沒開放邀請，並且現在全數皆已停止開發
+    - 高中動態網站架設選修獨自一人肝完一組四人的專題（因為其他三位成員上課都聽不懂）
+    - 資訊社教學
+    - 109 年 Bebras 運算思維挑戰賽 11、12 年級組 300 分
+    - 110 年北市資訊學科能力競賽佳作
+- 其他在想要不要放
+
+## 部落格 Github Repo
 ::github{repo="Kayxue/MyBlog"}
