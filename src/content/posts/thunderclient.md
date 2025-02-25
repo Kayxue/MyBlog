@@ -4,7 +4,7 @@ published: 2024-12-09
 description: 一個 Thunder Client 使用小教學
 image: "https://hackmd.io/_uploads/SJVcQ1Q4ye.png"
 tags: [ThunderClient, API, Hono, Deno]
-category: Software
+category: Guide
 draft: false
 ---
 或許各位有一些使用 API 的經驗或者撰寫 API 的經驗，但是測試 API 時，如果沒有簡易的測試工具，對於新手來講會是一件麻煩的事。不只要自己額外手動安裝 API Client 軟體，還有的甚至還要學指令，對於剛開始接觸的人來說有一定的門檻。所以今天我們要來介紹一款擁有圖形界面的 API Client 測試工具，除了功能強大，且只要你有裝 VSCode 系列編輯器（Visual Studio Code、VSCodium、Code-OSS 等，以下簡稱 VSCode），即可直接從擴充商店直接安裝並使用，可謂相當方便。
