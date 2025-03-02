@@ -45,3 +45,6 @@ WORKDIR /
 
 COPY --from=builder /app/dist/ ./public/
 ```
+
+## Contribution
+此 repo 歡迎各位進行貢獻，若您想要貢獻，請遵守 [Code of Conduct](https://www.rust-lang.org/policies/code-of-conduct)
