@@ -31,4 +31,5 @@ jobs:
         with:
           platforms: linux/arm64
           push: true
+          provenance: false
           tags: ghcr.io/kayxue/myblog:latest
