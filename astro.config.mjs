@@ -2,6 +2,7 @@ import sitemap from '@astrojs/sitemap'
 import svelte from '@astrojs/svelte'
 import tailwind from '@astrojs/tailwind'
 import swup from '@swup/astro'
+import { pluginFileIcons } from '@xt0rted/expressive-code-file-icons'
 import Compress from 'astro-compress'
 import icon from 'astro-icon'
 import { defineConfig } from 'astro/config'
@@ -18,6 +19,8 @@ import { GithubCardComponent } from './src/plugins/rehype-component-github-card.
 import { parseDirectiveNode } from './src/plugins/remark-directive-rehype.js'
 import { remarkExcerpt } from './src/plugins/remark-excerpt.js'
 import { remarkReadingTime } from './src/plugins/remark-reading-time.mjs'
+
+import expressiveCode from 'astro-expressive-code'
 
 // https://astro.build/config
 export default defineConfig({
@@ -58,6 +61,9 @@ export default defineConfig({
       Action: {
         Passed: async () => true, // https://github.com/PlayForm/Compress/issues/376
       },
+    }),
+    expressiveCode({
+      themes: ['aurora-x', 'light-plus'],
     }),
   ],
   markdown: {

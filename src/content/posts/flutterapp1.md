@@ -98,7 +98,7 @@ Add a floating button at the bottom-left of the screen, and filling textures is 
 ![](https://cdn-images-1.medium.com/max/1600/1*35reQJ5hYezDfGQfp-jJfQ.jpeg)
 所以又在檔案中的元件屬性內寫註解 prompt:
 :::tip[PROMPT]
-```dart=
+```dart
 //Make the button fill with the image
 ```
 :::
@@ -210,5 +210,3 @@ Pease set up notification settings for iOS
 ::github{repo="Kayxue/MyFirstFlutterApp"}
 ## Wrap-up
 不得不說 AI 真的蠻強大的，對於這種 app 來說，在我對 Flutter 不熟的狀況下，可能自己不知道寫出來要花多久時間，但只要交給 AI，只要跟他講你想要有怎樣的東西，他就可以幫你做出來，雖然說還是會有錯的可能，但是確實是一個可以減輕自己工作負擔的一個好工具。
-## Image Resource
-<blockquote class="twitter-tweet"><p lang="qme" dir="ltr"><a href="https://twitter.com/hashtag/Phigros_art?src=hash&amp;ref_src=twsrc%5Etfw">#Phigros_art</a> <a href="https://t.co/m9NqVDCaJX">pic.twitter.com/m9NqVDCaJX</a></p>&mdash; 蒼紫 (@tit_phin3005) <a href="https://twitter.com/tit_phin3005/status/1891825480757657965?ref_src=twsrc%5Etfw">February 18, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

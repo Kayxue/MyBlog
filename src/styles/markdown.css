@@ -52,7 +52,7 @@
             }
         }
     }
-
+    /*
     pre {
         @apply bg-[var(--codeblock-bg)] !important;
         @apply rounded-xl px-5;
@@ -65,6 +65,7 @@
             }
         }
     }
+    */
 
     ul, ol {
         li::marker {

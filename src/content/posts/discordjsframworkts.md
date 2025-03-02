@@ -20,7 +20,7 @@ draft: false
 ::github{repo="Kayxue/Discord.js-Framwork-Typescript"}
 
 ## 下載方式：
-```sh
+```bash
 git clone https://github.com/Kayxue/Discord.js-Framwork-Typescript.git
 ```
 
@@ -30,7 +30,7 @@ git clone https://github.com/Kayxue/Discord.js-Framwork-Typescript.git
 
 ### 2.安裝模組：
 輸入以下指令安裝專案所有所需模組：
-```sh
+```bash
 #使用npm
 npm i                            #安裝專案所需模組
 npm install --global typescript  #安裝 TypeScript
@@ -42,7 +42,7 @@ yarn global add typescript       #安裝 TypeScript
 
 ### 3.編輯設定檔：
 打開 `src/Config.ts` 並編輯設定
-```typescript=
+```typescript title="Config.ts"
 export const prefix = "";     //你想要的機器人前綴
 export const owner_id = "";   //機器人擁有者 ID
 export const token = "";      //機器人的 token
@@ -53,16 +53,16 @@ export const blacklist = [];  //使用指令黑名單，將使用者ID填入後�
 ### 4.執行專案：
 #### 方法1：使用 tsc 編譯
 打開終端機輸入：
-```sh
+```bash
 tsc         #編譯程式碼
 cd dist     #切換到 dist 資料夾(程式碼編譯結果輸出處)
 node .      #執行專案
 ```
 
 #### 方法2：使用 ts-node 直接執行
-:::info
+:::note
 若未安裝 ts-node 請使用下面指令安裝：
-```sh
+```bash
 #使用 npm
 npm install --global ts-node
 
@@ -72,7 +72,7 @@ yarn global add ts-node
 :::
 
 打開終端機輸入：
-```sh
+```bash
 cd src      #切換到 src 資料夾(專案資料夾)
 ts-node .   #執行專案
 ```
@@ -81,20 +81,20 @@ ts-node .   #執行專案
 ### 新增類別部分：
 #### 1.在 Command 資料夾下新增 `[檔名].ts`
 #### 2.匯入模組：
-```typescript=
+```typescript
 import Commands from "../core/commands";
 import { Client, Message } from "discord.js";
-...
+
 ```
 #### 3.宣告類別
-```typescript=
+```typescript
 class w extends Commands { //類別名稱可自取
 
 }
 ```
 
 #### 4.宣告匯出函數
-```typescript=
+```typescript
 export default function setup(bot: Client) {
     //實例化類別，此例類別為w(bot 必要傳入參數)，classname 非必要傳入(該 cog 名稱)
     let commands = new w(bot, "classname")
@@ -106,7 +106,7 @@ export default function setup(bot: Client) {
 ```
 
 ### 撰寫指令部分：
-```typescript=
+```typescript
     /*撰寫指令*/
     let w2 = commands.command(async function w(msg: Message, ...text: string[]) {
         await msg.channel.send(text.join(" "))
@@ -132,9 +132,9 @@ command函式第一個傳入參數可為具名函式或匿名函式（含箭頭�
 * 若**傳入匿名函式**，指令相關資訊的 **name 欄位則必須填寫**，若無填寫該欄位，則**該指令將無法被載入、觸發**
 * 若**傳入具名函式**，指令相關資訊的 **name 欄位也有填寫**，則該指令之**指令名稱為該指令相關資訊的 name 欄位值**
 :::
-:::info
+:::note
 **<類別實體之名稱>.bot** 可以傳回機器人物件：
-```typescript=
+```typescript
     commands.command((msg: Message) => {
         console.log(commands.bot.user.username) //在終端機中印出機器人名稱
     }, { name: "botname" })
@@ -142,7 +142,7 @@ command函式第一個傳入參數可為具名函式或匿名函式（含箭頭�
 :::
 
 ### 撰寫指令群組部分：
-```typescript=
+```typescript
     /*宣告指令群組*/
     let e = commands.group(async function wq(msg: Message) {
         console.log(msg.content)
@@ -193,7 +193,7 @@ command函式第一個傳入參數可為具名函式或匿名函式（含箭頭�
 :::
 
 ### 撰寫事件監聽器部分：
-```typescript=
+```typescript
     /*撰寫事件監聽器*/
     commands.listener(function message(message: Message) {
         console.log(`on_message:${message.author.tag}:${message.content}`)
@@ -214,7 +214,7 @@ command函式第一個傳入參數可為具名函式或匿名函式（含箭頭�
 * 若**傳入具名函式**，監聽事件相關資訊的 **event 欄位也有填寫**，則該事件函式之**監聽事件名稱為監聽事件相關資訊的 event 欄位值**
 :::
 
-:::info
+:::note
 以此範例為例，該事件函式會在機器人偵測到有人發訊息時被觸發。當該事件被觸發時，函式會傳入 Message 物件，並且執行事件函式裡的內容（印出指定內容）
 
 ### 官方文件：

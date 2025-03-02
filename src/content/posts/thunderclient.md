@@ -8,10 +8,12 @@ category: Guide
 draft: false
 ---
 或許各位有一些使用 API 的經驗或者撰寫 API 的經驗，但是測試 API 時，如果沒有簡易的測試工具，對於新手來講會是一件麻煩的事。不只要自己額外手動安裝 API Client 軟體，還有的甚至還要學指令，對於剛開始接觸的人來說有一定的門檻。所以今天我們要來介紹一款擁有圖形界面的 API Client 測試工具，除了功能強大，且只要你有裝 VSCode 系列編輯器（Visual Studio Code、VSCodium、Code-OSS 等，以下簡稱 VSCode），即可直接從擴充商店直接安裝並使用，可謂相當方便。
+
 :::warning
 * 本文只會講解基礎用法與免費功能，對於其他進階用法或付費功能的部分，請自行前往[官方文件](https://docs.thunderclient.com/)了解相關內容
 * 此文章會涉及到程式碼撰寫，本文會簡單解釋程式碼的用意，但如果想更深入研究程式碼中所使用的語法和框架用法等資訊，請自行利用 Google 進行查詢。
 :::
+
 ## What is Thunder Client?
 Thunder Client 是一個可以用來測試 API 的輕量級 Rest API Client，由 Ranga Vadhineni 製作，該擴充其中包含了不少的功能，例如 Local Storage，將 request 資料同步至 Git 等好用功能。
 ![CleanShot 2024-12-08 at 16.46.16@2x](https://hackmd.io/_uploads/HJixpRfE1l.png)
@@ -25,19 +27,21 @@ Thunder Client 是一個可以用來測試 API 的輕量級 Rest API Client，�
 
 ## Let's Create a Micro API First!
 雖然說現在網路上有公開的 API 其實一大堆，但為了後續的教學方便，還有方便各位進行實驗，所以我們先來自行架設一個 API 吧！
-:::info
+
+:::note
 此節會帶各位使用 Deno 執行環境和 Hono 框架進行架設，如果你有自己習慣的框架或者 Runtime Environment，您也可以選擇自行架設，並跳至下一章節。
 :::
+
 ### Install Runtime Environment
 首先，我們先來安裝 Deno 吧！
 #### Windows
 請以系統管理員身份開啟一個 Powershell，並輸入以下指令：
-```ps1=
+```powershell title="PowerShell"
 irm https://deno.land/install.ps1 | iex
 ```
 #### Mac/Linux
 請開啟終端機並輸入以下指令：
-```shell=
+```bash title="Terminal"
 curl -fsSL https://deno.land/install.sh | sh
 ```
 ### Prepare Project
@@ -48,7 +52,7 @@ curl -fsSL https://deno.land/install.sh | sh
 然後請先在該專案資料夾下建立一個 `deno.json` 檔案，以利 Deno Extension 自動識別此專案為 Deno 類型的專案
 ### Let's Start coding!
 請在專案資料夾下新增 `main.ts` 檔案，並且輸入以下內容：
-```typescript=
+```typescript title="main.ts"
 import { Hono } from "jsr:@hono/hono";
 
 const hono = new Hono();
@@ -59,18 +63,20 @@ hono.get("/", (c) => {
 
 Deno.serve({ port: 3000 }, hono.fetch);
 ```
-:::info
+
+:::note
 若匯入模組時出現找不到模組之類的錯誤訊息，通常是因為您安裝或更新 Deno 後第一次匯入該模組，請先稍等一下，該錯誤便會自動消失。若過了一段時間後沒有消失，請自行將滑鼠游標移到紅色波浪線上，會出現一個錯誤提示訊息框，滑到錯誤提示框最下方，點選「快速修復」-> `Install xxx as dependencies`，Deno 就會自動安裝所需模組。
 :::
+
 在此檔案中，我們定義了一個 Hono Instance，並且定義了根路徑在接受到 `Get` 請求時的處理方式：Server 在接收到請求後，會傳回一段文字（也就是 `Hello Hono`）給請求者。定義完路徑之後，之後透過 `Deno.serve` 建立一個監聽端口 `3000` 的 Web Server，並且在接收到 request 之後，將 request 交給 hono 處理。
 ### Run the project
 接下來，請在專案資料夾下開啟一個新的終端機，並輸入以下指令：
-```shell=
+```bash title="Terminal"
 # 下方 -N 參數的話 -N 或 --allow-net 皆可，表允許進行網路存取
 deno run -N main.ts
 ```
 順利的話，您會在終端機看到以下訊息：
-```
+```bash title="Terminal"
 Listening on http://0.0.0.0:3000/
 ```
 之後打開網路瀏覽器，並前往上方訊息所列出的網址，即可看到 API Server 的回應
@@ -112,7 +118,7 @@ Listening on http://0.0.0.0:3000/
 ![CleanShot 2024-12-09 at 10.41.59@2x](https://hackmd.io/_uploads/Syg7YR7Nyx.png)
 ### Import from source
 當然，如果您想測試的 API 有提供 collection 並且提供匯出功能的話，您也可以選擇從別的資源進行匯入，目前 Postman、Thunder Client、Insomnia 或者 Open API 都有支援喔！
-:::info
+:::note
 此部分僅稍做介紹，因為免費版只有支援 Thunder Client 格式，並且只能匯入自己的 Collection，通常只會在你自己需要在別人的電腦上測試時，才會需要使用此功能，若想了解更多，請查閱[官方文件](https://docs.thunderclient.com/features/import)。
 :::
 首先，將滑鼠游標移到你想匯出的 Collection 上，點選右側的三個點按鈕開啟選單，然後選擇 `Export` 進行匯出
@@ -132,7 +138,7 @@ Listening on http://0.0.0.0:3000/
 ### Query
 Query 是屬於 URL 的一部分，他提供你或者應用程式在送出相關請求時，可以提供相關數值，讓 API 可以依據您提供的相關數值進行資料過濾等操作！
 在開始介紹相關功能之前，首先我們先修改一下我們 API 的程式碼吧！現在我們有一個資料庫中存著學生的成績，並且學生的成績可以透過向 `/scores` 發送 `GET` request 取得，並且在 requester 有提供學生名稱的狀況下，僅傳回該學生的成績內容：
-```typescript=
+```typescript title="main.ts" ins={3-11,13-39,47-54} collapse={41-45}
 import { Hono } from "jsr:@hono/hono";
 
 //Defining type
@@ -190,7 +196,7 @@ hono.get("/scores", (c) => {
 
 Deno.serve({ port: 3000 }, hono.fetch);
 ```
-:::info
+:::note
 * `4~11` 行：定義學生成績資料的類型
 * `14~39` 行：定義一個小型學生成績資料庫
 * `48~54` 行：定義 `/scores` 路徑在接收到 `GET` 請求後如何處理。首先會先確認 requester 是否有提供 `name` （也就是學生名稱）參數，若無，傳回全部學生的成績資料，有則進行查詢。若有找到指定學生成績資料，則傳回該筆學生的成績資料，否則傳回找不到資料的訊息並附加狀態碼 `400 (Bad Request)`
@@ -214,9 +220,8 @@ Deno.serve({ port: 3000 }, hono.fetch);
 ### Headers
 Request Header 是一種 HTTP Header，其可以用於發起請求時，用於告訴 Server 關於 Request Context 的相關資訊，而有些 API 也會請 requester 在向該 API 發起請求時，透過在 Header 處加上 API Key 的方式，將 API Key 傳送給 API Server。
 接下來我們修改程式碼，未來將請求送至 `scores` 路徑時，需要在 Header 提供一個金鑰，且其值需要為 `123`，否則傳回錯誤：
-```typescript=
+```typescript title="main.ts" startLineNumber=47 ins={2-3}
 hono.get("/scores", (c) => {
-    //Add these
     const { key } = c.req.header();
     if (key !== "123") return c.text("Invalid Key", 400);
 
@@ -239,35 +244,79 @@ hono.get("/scores", (c) => {
 ### Auth
 Auth 工具的話主要負責 authentication 相關管理，裡面有支援非常多的 authentication method，Bearer、OAuth2 等全部都有，對於測試時可說是非常方便。
 ![CleanShot 2024-12-09 at 17.11.36@2x](https://hackmd.io/_uploads/SyStVVE4Jx.png)
-:::info
+:::note
 礙於篇幅關係，在此只會示範 `Basic Authentication`，其餘 Authentication Method 若您有興趣可以自行參考[官方文件](https://docs.thunderclient.com/features/auth)。
 :::
 首先回到我們的 API 並修改以下段落程式碼：
-```typescript=
+```typescript title="main.ts" ins=', basicAuth({ username: "Josh", password: "12345" })' del={51-52} collapse={5-47} ins={2-3}
 import { Hono } from "jsr:@hono/hono";
 //Import basicAuth middleware
 import { basicAuth } from "jsr:@hono/hono/basic-auth";
 
-// ...
+//Defining type
+type studentScore = {
+    name: string;
+    scores: {
+        chinese: number;
+        english: number;
+        mathematics: number;
+    };
+};
+
+//Defining a small database
+const studentsScore: studentScore[] = [
+    {
+        name: "Mario",
+        scores: {
+            chinese: 55,
+            english: 66,
+            mathematics: 26,
+        },
+    },
+    {
+        name: "Barry",
+        scores: {
+            chinese: 85,
+            english: 68,
+            mathematics: 94,
+        },
+    },
+    {
+        name: "Isabella",
+        scores: {
+            chinese: 10,
+            english: 67,
+            mathematics: 95,
+        },
+    },
+];
+
+const hono = new Hono();
+
+hono.get("/", (c) => {
+    return c.text("Hello Hono!");
+});
 
 // Add basicAuth middleware and specified correct username and password
 hono.get("/scores", basicAuth({ username: "Josh", password: "12345" }), (c) => {
-    // And remove these
-    // const { key } = c.req.header();
-    // if (key !== "123") return c.text("Invalid Key", 400);
+    const { key } = c.req.header();
+    if (key !== "123") return c.text("Invalid Key", 400);
+
     const { name } = c.req.query();
     if (!name?.length) return c.json(studentsScore);
     const student = studentsScore.find((e) => e.name === name);
     if (student) return c.json(student);
     return c.text("Student not found", 400);
 });
+
+Deno.serve({ port: 3000 }, hono.fetch);
 ```
 修改完後請重新啟動 API Server。
 接下來回到 request 的 `Headers` 頁面，刪除剛剛建立的 `key` Header。再來切換到 `Auth` 頁面，然後 authentication method 先選擇 `None`。
 ![CleanShot 2024-12-09 at 17.34.32@2x](https://hackmd.io/_uploads/HJpTKENNye.png)
 此時送請求過去，你會發現 API 傳回了狀態碼 `401` 代表我們目前是 unauthenticated 的狀態
 ![CleanShot 2024-12-09 at 17.31.28@2x](https://hackmd.io/_uploads/Bkl_qVV4ye.png)
-:::info
+:::note
 基本上不管 Unauthenticated 與 Unauthorized，通常皆會回傳此狀態碼，但是其實兩者是有差別的。Unauthenticated 是代表尚未確認或無法確認您的身份，而 Unauthorized 是代表您沒有權限進行存取或執行動作。
 :::
 接下來我們將 Authentication Method 改成 `Basic`，並輸入剛剛在專案中，在 `basicAuth` middleware 寫的 username 與 password
@@ -277,9 +326,58 @@ hono.get("/scores", basicAuth({ username: "Josh", password: "12345" }), (c) => {
 ### Body
 此頁面可以撰寫該 Request 的 Request Body，當你要送出到 API 時，您有可能需要將特殊資料送給 API 處理（e.g. JSON、Form-data），此時即可把那些資料透過 Request Body 將整坨資料傳送至 API。請注意，`GET` and `HEAD` request 無法傳送 Request Body。
 接下來我們就來寫程式碼吧！假設現在有人想要將成績送到資料庫內，所以我們需要定義一個新路徑，讓那個人可以透過 JSON 格式的 Request Body 將學生成績新增到資料庫！
-```typescript=
+```typescript title="main.ts" collapse={1-52} ins={54-59}
+import { Hono } from "jsr:@hono/hono";
+import { basicAuth } from "jsr:@hono/hono/basic-auth";
+
+type studentScore = {
+    name: string;
+    scores: {
+        chinese: number;
+        english: number;
+        mathematics: number;
+    };
+};
+
+const studentsScore: studentScore[] = [
+    {
+        name: "Mario",
+        scores: {
+            chinese: 55,
+            english: 66,
+            mathematics: 26,
+        },
+    },
+    {
+        name: "Barry",
+        scores: {
+            chinese: 85,
+            english: 68,
+            mathematics: 94,
+        },
+    },
+    {
+        name: "Isabella",
+        scores: {
+            chinese: 10,
+            english: 67,
+            mathematics: 95,
+        },
+    },
+];
+
+const hono = new Hono();
+
+hono.get("/", (c) => {
+    return c.text("Hello Hono!");
+});
+
 hono.get("/scores", basicAuth({ username: "Josh", password: "12345" }), (c) => {
-    //...
+    const { name } = c.req.query();
+    if (!name?.length) return c.json(studentsScore);
+    const student = studentsScore.find((e) => e.name === name);
+    if (student) return c.json(student);
+    return c.text("Student not found", 400);
 });
 
 //Defining Path
@@ -292,7 +390,7 @@ hono.post("/scores", async (c) => {
 Deno.serve({ port: 3000 }, hono.fetch);
 ```
 這次此路徑是改接收 `POST` request，因為 `GET` request 的話 Client 端是無法傳送 Request Body 的。接下來在接收到 post 請求後，我們會先呼叫 `c.req.json()` 取得 Request Body 並將其轉成 JavaScript Object，之後直接將資料新增至資料庫，並傳回新增進去的資料。`studentsScore.at(-1)` 表取得 `studentScore` 陣列中倒數第一筆資料，即我們剛剛新增進去的資料。
-:::info
+:::note
 這次因為我們處理的程式中有需要處理 Promise，故這次在 handling function 前面加了 `async` 關鍵字，使我們在 handling function 中可以使用 `await` 來處理 Promise 的資料，降低處理 Promise 時的程式碼複雜度。
 :::
 修改完程式碼之後請再次重啟 API Server，然後回到 Thunder Client 的介面，新增一個 Request
@@ -308,7 +406,7 @@ Deno.serve({ port: 3000 }, hono.fetch);
 ### Tests
 最後就是測試功能了，你可以在此制定測試通過的條件，然後送出請求，API Client 會自動依據您所提供的測試條件，來對回傳的資料進行檢查，進而讓你確認測試是否有通過。以下為 Tests 頁面展示：
 ![CleanShot 2024-12-09 at 18.51.33@2x](https://hackmd.io/_uploads/BJ4ZnH4Vyx.png)
-:::info
+:::note
 測試部分，Thunder Client 有提供兩種測試方式，一種是給予測試條件（`Tests`），一種是透過寫程式碼進行測試（`Scripting`）。因為 `Scripting` 為付費功能，此處僅示範 `Tests`。
 :::
 假如我們想要測試查詢學生 Mario 的成績，確認是否回傳碼為 `200`、並且該學生英文成績是否為 86 分，我們可以先新增 Query

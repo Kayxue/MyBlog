@@ -13,7 +13,7 @@ draft: false
 * **不包含任何終端機：** 此 image 奠基於 Docker 保留的最小映像—scratch，所以此 image 不包含任何終端機！並且只能執行無需任何依賴的執行檔！
 :::
 ## Docker File Usage Example
-```dockerfile=
+```dockerfile title=".dockerfile"
 FROM ghcr.io/kayxue/actixstaticserve:latest
 
 WORKDIR /
@@ -30,7 +30,7 @@ COPY ./public/ ./public/
 在此以 Bun 為例，實際 first stage 使用哪個 image 請依據您使用的 package manager 而定。
 :::
 
-```dockerfile=
+```dockerfile title=".dockerfile"
 FROM oven/bun:alpine AS builder
 
 WORKDIR /app
