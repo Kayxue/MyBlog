@@ -10,7 +10,6 @@ draft: false
 ::github{repo="Kayxue/ActixStaticServe"}
 :::warning
 * **無自訂：** 此 image 目前並不支援自訂任何 server 相關設定。伺服器預設監聽位置為 `0.0.0.0:3000`，並且預設 serving `/public` 資料夾
-* **僅 `linux/arm64`：** 目前此 image 僅支援 `linux/arm64`
 * **不包含任何終端機：** 此 image 奠基於 Docker 保留的最小映像—scratch，所以此 image 不包含任何終端機！並且只能執行無需任何依賴的執行檔！
 :::
 ## Docker File Usage Example
