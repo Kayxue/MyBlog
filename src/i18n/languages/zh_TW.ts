@@ -6,6 +6,7 @@ export const zh_TW: Translation = {
   [Key.about]: '關於',
   [Key.archive]: '彙整',
   [Key.search]: '搜尋',
+  [Key.friends]: '友站',
 
   [Key.tags]: '標籤',
   [Key.categories]: '分類',
@@ -28,11 +29,11 @@ export const zh_TW: Translation = {
 
   [Key.lightMode]: '亮色',
   [Key.darkMode]: '暗色',
-  [Key.systemMode]: '跟隨系統',
+  [Key.systemMode]: '系統',
 
   [Key.more]: '更多',
 
   [Key.author]: '作者',
-  [Key.publishedAt]: '發佈於',
+  [Key.publishedAt]: '發佈日期',
   [Key.license]: '許可協議',
 }
