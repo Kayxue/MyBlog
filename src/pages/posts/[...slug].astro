@@ -19,9 +19,20 @@ export async function getStaticPaths() {
   const blogEntries = await getCollection('posts', ({ data }) => {
     return import.meta.env.PROD ? data.draft !== true : true
   })
-  return blogEntries.map(entry => ({
+  return blogEntries.map((entry, i) => ({
     params: { slug: entry.slug },
-    props: { entry },
+    props: {
+      entry: {
+        ...entry,
+        data: {
+          ...entry.data,
+          nextSlug: blogEntries[(i + 1) % blogEntries.length]?.slug,
+          nextTitle: blogEntries[(i + 1) % blogEntries.length]?.data.title,
+          prevSlug: blogEntries.at(i - 1)?.slug,
+          prevTitle: blogEntries.at(i - 1)?.data.title,
+        },
+      },
+    },
   }))
 }
 
