@@ -21,18 +21,7 @@ export async function getStaticPaths() {
   })
   return blogEntries.map((entry, i) => ({
     params: { slug: entry.slug },
-    props: {
-      entry: {
-        ...entry,
-        data: {
-          ...entry.data,
-          nextSlug: blogEntries[(i + 1) % blogEntries.length]?.slug,
-          nextTitle: blogEntries[(i + 1) % blogEntries.length]?.data.title,
-          prevSlug: blogEntries.at(i - 1)?.slug,
-          prevTitle: blogEntries.at(i - 1)?.data.title,
-        },
-      },
-    },
+    props: { entry },
   }))
 }
 
