@@ -2,7 +2,7 @@
 title: ActixStaticServe Docker Image 使用教學
 published: 2025-02-26
 description: ActixStaticServe Docker Image 使用教學
-tags: [Docker, Docker Image, Static Site, Hosting]
+tags: [Docker, Static Site, Hosting]
 category: Guide
 draft: false
 ---
