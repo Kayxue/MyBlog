@@ -27,7 +27,7 @@ COPY ./public/ ./public/
 沒錯，用起來非常簡單吧！以下順便再給各位一個範例
 ## Example: Using with an Astro Static Site Project
 :::note
-在此以 Bun 為例，實際 first stage 使用哪個 image 請依據您使用的 package manager 而定。
+在此以 Bun 為例，實際 first stage 使用哪個 image 請依據您使用的程式語言與 package manager 而定。
 :::
 
 ```dockerfile title=".dockerfile"
