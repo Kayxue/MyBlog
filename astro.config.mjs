@@ -20,6 +20,7 @@ import { parseDirectiveNode } from './src/plugins/remark-directive-rehype.js'
 import { remarkExcerpt } from './src/plugins/remark-excerpt.js'
 import { remarkReadingTime } from './src/plugins/remark-reading-time.mjs'
 
+import yaml from '@rollup/plugin-yaml'
 import expressiveCode from 'astro-expressive-code'
 
 // https://astro.build/config
@@ -132,5 +133,6 @@ export default defineConfig({
         },
       },
     },
+    plugins: [yaml()],
   },
 })
