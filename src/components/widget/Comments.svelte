@@ -11,7 +11,6 @@
         data-input-position="top"
         data-theme={$mode === DARK_MODE ? 'dark' : 'light'}
         data-lang="zh-TW"
-        data-loading="lazy"
         crossorigin="anonymous"
         async>
     </script>
