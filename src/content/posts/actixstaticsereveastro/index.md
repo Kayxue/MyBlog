@@ -123,7 +123,7 @@ bun run dev
 :::
 ## Writeing Dockerfile
 接下來就是撰寫 Dockerfile 的部分，請在專案根目錄下建立 `dockerfile` 檔案，並輸入以下內容：
-```dockerfile title="Dockerfile"
+```dockerfile title=".dockerfile"
 FROM oven/bun:alpine AS builder
 
 WORKDIR /app
