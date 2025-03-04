@@ -208,8 +208,8 @@ Pease set up notification settings for iOS
 自行使用注意：此應用程式目前所連線的 WebSocket server 仍為本人自己寫的本地 server 位置，若想測試效果，請將 WebSocket server 連線位置改成 `wss://echo.websocket.events` 或者你自己寫的 WebSocket server 位置。並且若在 iOS 之外系統執行，因為本人沒有進行特別設定，故無法看到通知，請見諒。
 :::
 ::github{repo="Kayxue/MyFirstFlutterApp"}
-## Wrap-up
+## Wrapping Up
 不得不說 AI 真的蠻強大的，對於這種 app 來說，在我對 Flutter 不熟的狀況下，可能自己不知道寫出來要花多久時間，但只要交給 AI，只要跟他講你想要有怎樣的東西，他就可以幫你做出來，雖然說還是會有錯的可能，但是確實是一個可以減輕自己工作負擔的一個好工具。
 ## Image Resource
 
-<blockquote class="twitter-tweet"><p lang="qme" dir="ltr"><a href="https://twitter.com/hashtag/Phigros_art?src=hash&amp;ref_src=twsrc%5Etfw">#Phigros_art</a> <a href="https://t.co/m9NqVDCaJX">pic.twitter.com/m9NqVDCaJX</a></p>&mdash; 蒼紫 (@tit_phin3005) <a href="https://twitter.com/tit_phin3005/status/1891825480757657965?ref_src=twsrc%5Etfw">February 18, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+<blockquote class="twitter-tweet"><p lang="qme" dir="ltr"><a href="https://twitter.com/hashtag/Phigros_art?src=hash&amp;ref_src=twsrc%5Etfw">#Phigros_art</a> <a href="https://t.co/m9NqVDCaJX">pic.twitter.com/m9NqVDCaJX</a></p>&mdash; 蒼紫 (@tit_phin3005) <a href="https://twitter.com/tit_phin3005/status/1891825480757657965?ref_src=twsrc%5Etfw">February 18, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

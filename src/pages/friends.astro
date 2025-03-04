@@ -5,7 +5,7 @@ import MainGridLayout from '../layouts/MainGridLayout.astro'
 import { getEntry } from 'astro:content'
 import Markdown from '@components/misc/Markdown.astro'
 import Comments from '@components/widget/Comments.svelte'
-import { friend } from '../../public/friends.yml'
+import { friend } from '../assets/files/friends.yml'
 import I18nKey from '../i18n/i18nKey'
 import { i18n } from '../i18n/translation'
 
@@ -18,7 +18,7 @@ const items = friend
     <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32">
         <div class="card-base z-10 px-9 py-6 relative w-full ">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8 my-4">
-                {items.map((item) => (   
+                {items.map((item) => (
                     <div class="flex flex-nowrap items-stretch h-28 gap-4 rounded-[var(--radius-large)]">
                         <div class="w-28 h-28 flex-shrink-0 rounded-lg overflow-hidden bg-zinc-200 dark:bg-zinc-900">
                             <img src={item.imgurl} alt="友站頭像" class="w-full h-full object-cover">
@@ -28,10 +28,10 @@ const items = friend
                             <div class="text-50 text-sm font-medium">{item.desc}</div>
                             <div class:list={["items-center", {"flex": true, "hidden md:flex" : false}]}>
                                 <div class="flex flex-row flex-nowrap items-center">
-                                    {(item.tags && item.tags.length > 0) && item.tags.map((tag,i) => (  
+                                    {(item.tags && item.tags.length > 0) && item.tags.map((tag,i) => (
                                     <div class:list={[{"hidden": i==0}, "mx-1.5 text-[var(--meta-divider)] text-sm" ]}>
                                         /
-                                    </div>  
+                                    </div>
                                     <span class="transition text-50 text-sm font-medium">
                                         {tag}
                                     </span>))}
@@ -46,7 +46,7 @@ const items = friend
                         </a>
                     </div>
                 ))}
-            </div>  
+            </div>
             <Markdown class="mt-2">
                 <Content />
             </Markdown>
