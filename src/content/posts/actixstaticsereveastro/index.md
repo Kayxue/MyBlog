@@ -108,7 +108,7 @@ zed .
 :::note
 在此以 [Bun](https://bun.sh/) 為例，上方實際修改的地方與等一下輸入的指令皆依據您使用的 package manager 而定。
 :::
-接下來請輸入以下只令安裝專案所需的模組：
+接下來請輸入以下指令安裝專案所需的模組：
 ```bash title="Terminal"
 bun install
 ```
