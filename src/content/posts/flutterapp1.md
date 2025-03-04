@@ -97,11 +97,9 @@ Add a floating button at the bottom-left of the screen, and filling textures is 
 結果按鈕位置非常奇怪，並且圖片也整個使按鈕失去了原有形狀：
 ![](https://cdn-images-1.medium.com/max/1600/1*35reQJ5hYezDfGQfp-jJfQ.jpeg)
 所以又在檔案中的元件屬性內寫註解 prompt:
-:::tip[PROMPT]
 ```dart title="main.dart"
 //Make the button fill with the image
 ```
-:::
 結果 AI 新增程式碼後儲存，圖片直接變成了圓型
 ![](https://cdn-images-1.medium.com/max/1600/1*escn5IJungrxSqL34R1lUw.jpeg)
 再次找了 AI:
