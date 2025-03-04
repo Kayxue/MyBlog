@@ -98,7 +98,7 @@ Add a floating button at the bottom-left of the screen, and filling textures is 
 ![](https://cdn-images-1.medium.com/max/1600/1*35reQJ5hYezDfGQfp-jJfQ.jpeg)
 所以又在檔案中的元件屬性內寫註解 prompt:
 :::tip[PROMPT]
-```dart
+```dart title="main.dart"
 //Make the button fill with the image
 ```
 :::
