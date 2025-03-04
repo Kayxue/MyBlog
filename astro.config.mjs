@@ -18,6 +18,10 @@ import { GithubCardComponent } from "./src/plugins/rehype-component-github-card.
 import { parseDirectiveNode } from "./src/plugins/remark-directive-rehype.js";
 import { remarkExcerpt } from "./src/plugins/remark-excerpt.js";
 import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
+import { expressiveCodeConfig } from "./src/config.ts";
+import { pluginLanguageBadge } from "./src/plugins/expressive-code/language-badge.ts";
+import { pluginCollapsibleSections } from "@expressive-code/plugin-collapsible-sections";
+import { pluginLineNumbers } from "@expressive-code/plugin-line-numbers";
 
 import yaml from "@rollup/plugin-yaml";
 import expressiveCode from "astro-expressive-code";
@@ -63,7 +67,20 @@ export default defineConfig({
       },
     }),
     expressiveCode({
-      themes: ["aurora-x", "light-plus"],
+      themes: expressiveCodeConfig.themes,
+      plugins: [
+        pluginLineNumbers(),
+        pluginCollapsibleSections(),
+        pluginLanguageBadge(),
+      ],
+      defaultProps: {
+        wrap: true,
+        overridesByLang: {
+          shellsession: {
+            showLineNumbers: false,
+          },
+        },
+      },
     }),
   ],
   markdown: {
