@@ -195,7 +195,7 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 ```
-* `28` 行的 `<username>` 與 `<image-name>` 請分別替換成您想推送到平台的使用者名稱與 image 名稱（若為 GitHub Packages，則 username 為 GitHub 使用者名稱）。若您想推送到 Docker Hub，請將 `ghcr.io` 改為 `docker.io`。
+* `28` 行的 `<username>` 與 `<image-name>` 請分別替換成您想推送到平台的使用者名稱與 image 名稱（若為 GitHub Container Registry，則 username 為 GitHub 使用者名稱）。若您想推送到 Docker Hub，請將 `ghcr.io` 改為 `docker.io`。
 :::
 修改完成後，即可在終端機中輸入以下指令將修改後的檔案推送至 GitHub：
 ```bash title="Terminal"
