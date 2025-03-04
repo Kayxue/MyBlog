@@ -122,8 +122,8 @@ bun run dev
 * 若您不是使用 pnpm 作為 package manager，可刪除專案根目錄下的 `pnpm-lock.yaml` 檔案。
 :::
 ## Writeing Dockerfile
-接下來就是撰寫 dockerfile 的部分，請在專案根目錄下建立 `.dockerfile` 檔案，並輸入以下內容：
-```dockerfile title=".dockerfile"
+接下來就是撰寫 dockerfile 的部分，請在專案根目錄下建立 `Dockerfile` 檔案，並輸入以下內容：
+```dockerfile title="Dockerfile"
 FROM oven/bun:alpine AS builder
 
 WORKDIR /app
