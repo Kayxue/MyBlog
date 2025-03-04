@@ -229,5 +229,5 @@ docker run -d --name <container-name> -p 3000:3000 --restart=unless-stopped ghcr
 這次的文章雖然主要是以 Astro 靜態網站為例，但是其實只要是靜態網站專案，都可以使用此方法進行部署。雖然說目前沒有什麼自訂義可言，但是對於一般的靜態網站來說，這個 image 已經足夠使用了。並且打包方式也是非常的簡單，只要準備好靜態網站的檔案，然後撰寫好 Dockerfile，再透過 GitHub Actions 自動化 build image，即可輕鬆部署您的靜態網站，真的是相當方便呢！
 
 如果您有任何問題或者建議，歡迎在下方留言，如果文章有任何錯誤，也請不吝指正，謝謝！
-## GitHub Repo
+## GitHub Repo of This Tutorial
 ::github{repo="Kayxue/ActixStaticServeTutorial"}
