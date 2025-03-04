@@ -210,7 +210,7 @@ git push origin master
 如果推送至 GitHub Container Registry，您可以在專案的 code 頁面右下角看到 image 已經成功上傳至 registry。若您是推送至 Docker Hub，請至 Docker Hub 網站確認。
 ![Registry](./packagelocation.png)
 ## Deployments
-在 build 出 image 後，最後就是在 SBC 上拉取該 image，並且執行 image 了。在此假設您已經在目標裝置上安裝 Docker，並且已經設定好 Docker 的相關設定。
+在 build 出 image 後，最後就是在目標裝置上拉取該 image，並且執行 image 了。在此假設您已經在目標裝置上安裝 Docker，並且已經設定好 Docker 的相關設定。
 接下來請遠端連線至您的目標裝置，或者在您的目標裝置上開啟終端機，並輸入以下指令拉取 image：
 ```bash title="Terminal"
 docker pull ghcr.io/<username>/<image-name>:latest
