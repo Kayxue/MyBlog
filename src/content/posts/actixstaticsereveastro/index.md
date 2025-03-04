@@ -122,7 +122,7 @@ bun run dev
 * 若您不是使用 pnpm 作為 package manager，可刪除專案根目錄下的 `pnpm-lock.yaml` 檔案。
 :::
 ## Writeing Dockerfile
-接下來就是撰寫 Dockerfile 的部分，請在專案根目錄下建立 `dockerfile` 檔案，並輸入以下內容：
+接下來就是撰寫 dockerfile 的部分，請在專案根目錄下建立 `.dockerfile` 檔案，並輸入以下內容：
 ```dockerfile title=".dockerfile"
 FROM oven/bun:alpine AS builder
 
@@ -226,7 +226,7 @@ docker run -d --name <container-name> -p 3000:3000 --restart=unless-stopped ghcr
 :::
 確定容器執行成功後，請進行端口映射或者 Cloudflare Tunnel 設定。在完成設定後，輸入域名或者 IP 即可看到您的網站。
 ## Wrapping Up
-這次的文章雖然主要是以 Astro 靜態網站為例，但是其實只要是靜態網站專案，都可以使用此方法進行部署。雖然說目前沒有什麼自訂義可言，但是對於一般的靜態網站來說，這個 image 已經足夠使用了。並且打包方式也是非常的簡單，只要準備好靜態網站的檔案，然後撰寫好 Dockerfile，再透過 GitHub Actions 自動化 build image，即可輕鬆部署您的靜態網站，真的是相當方便呢！
+這次的文章雖然主要是以 Astro 靜態網站為例，但是其實只要是靜態網站專案，都可以使用此方法進行部署。雖然說目前沒有什麼自訂義可言，但是對於一般的靜態網站來說，這個 image 已經足夠使用了。並且打包方式也是非常的簡單，只要準備好靜態網站的檔案，然後撰寫好 dockerfile，再透過 GitHub Actions 自動化 build image，即可輕鬆部署您的靜態網站，真的是相當方便呢！
 
 如果您有任何問題或者建議，歡迎在下方留言，如果文章有任何錯誤，也請不吝指正，謝謝！
 ## GitHub Repo of This Tutorial
