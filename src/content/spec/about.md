@@ -28,5 +28,11 @@
     - 110 年北市資訊學科能力競賽佳作
 - 其他在想要不要放
 
+## 使用字型
+
+https://hyperos.mi.com/font/en/
+
+原本為 MiSans + MisansTC 雙字型（MisansTC 優先），但目前為加快載入速度，目前僅留 MisansTC。
+
 ## 部落格 Github Repo
 ::github{repo="Kayxue/MyBlog"}
