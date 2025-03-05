@@ -6,7 +6,7 @@ tags: [Docker, Static Site, Hosting]
 category: Guide
 draft: false
 ---
-在[上一篇文章](/posts/actixstaticserve/)中，我大概介紹了本人製作的 ActixStatic Docker image 簡單的使用方法，但是在實務上，如果每次都要手動將網頁專案 build 好，再將靜態網站檔案放入資料夾，然後自己手動下指令 build image 將打包好的 image 上傳至 registry，這其實是非常麻煩的一件事，所以這次的文章將會以 Astro 靜態網站為例，介紹如何在使用前端框架的專案中，使用此 image 與使用 GitHub Actions 自動化 build image 流程，將 image 上傳至 registry，並在 SBC 上架設網站。
+在[上一篇文章](/posts/actixstaticserve/)中，我大概介紹了本人製作的 ActixStatic Docker image 簡單的使用方法，但是在實務上，如果每次都要手動將網頁專案 build 好，再將靜態網站檔案放入資料夾，然後自己手動下指令 build image 將打包好的 image 上傳至 registry，這其實是非常麻煩的一件事，所以這次的文章將會以 Astro 靜態網站為例，介紹如何在使用前端框架的專案中，使用此 image 與使用 GitHub Actions 自動化 build image 流程，將 image 上傳至 registry，並在目標裝置上架設網站。
 ::github{repo="Kayxue/ActixStaticServe"}
 ## Preparation
 首先，我們需要一個 Astro 靜態網站的專案，在此我以 [fuwari](https://github.com/saicaca/fuwari) 為例，打開 fuwari 的 GitHub 專案網頁後，點選右上角的 `Use this template` -> `Create repository from template`，以此 repo 為模板建立一個新的 repo。
