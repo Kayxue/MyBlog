@@ -9,7 +9,7 @@ draft: false
 在[上一篇文章](/posts/actixstaticserve/)中，我大概介紹了本人製作的 ActixStatic Docker image 簡單的使用方法，但是在實務上，如果每次都要手動將網頁專案 build 好，再將靜態網站檔案放入資料夾，然後自己手動下指令 build image 將打包好的 image 上傳至 registry，這其實是非常麻煩的一件事，所以這次的文章將會以 Astro 靜態網站為例，介紹如何在使用前端框架的專案中，使用此 image 與使用 GitHub Actions 自動化 build image 流程，將 image 上傳至 registry，並在目標裝置上架設網站。
 ::github{repo="Kayxue/ActixStaticServe"}
 ## Preparation
-首先，我們需要一個 Astro 靜態網站的專案，在此我以 [fuwari](https://github.com/saicaca/fuwari) 為例，打開 fuwari 的 GitHub 專案網頁後，點選右上角的 `Use this template` -> `Create repository from template`，以此 repo 為模板建立一個新的 repo。
+首先，我們需要一個 Astro 靜態網站的專案，在此我以 [fuwari](https://github.com/saicaca/fuwari) 為例，打開 fuwari 的 GitHub 專案網頁後，點選右上角的 `Use this template` -> `Create a new repository`，以此 repo 為模板建立一個新的 repo。
 ![RepoPage](./newrepo.png)
 進入建立新 repo 的介面後，先確認模板是否正確，然後寫上 repo 名稱等相關資訊，確認填寫的資訊 OK 後即可點選 `Create repository` 建立 repo。
 ![CreateRepo](./createrepo.png)
@@ -185,7 +185,7 @@ jobs:
           tags: ghcr.io/<username>/<image-name>:latest
 ```
 :::note
-* `runs-on` 是指定您想在哪個環境下執行建置 image，因為本人是架在 SBC（單板電腦）上，而 SBC 多數 CPU 皆為 ARM64 架構，故這邊的環境選擇 `ubuntu-24.04-arm`。若您架設之機器的架構為 `x86_64`，請將上方第 6 行的 `ubuntu-24.04-arm` 改為 `ubuntu-latest`。若想同時支援多個 CPU Architecture，請參考 [Multi-platform image with GitHub Actions](https://docs.docker.com/build/ci/github-actions/multi-platform/)
+* `runs-on` 是指定您想在哪個環境下執行建置 image，因為本人是架在 SBC（單板電腦）上，而 SBC 多數 CPU 皆為 ARM64 架構，故這邊的環境選擇 `ubuntu-24.04-arm`。若您架設之機器的架構為 `x86_64`，請將上方第 6 行的 `ubuntu-24.04-arm` 改為 `ubuntu-latest`。若想同時支援多個 CPU architecture，請參考 [Multi-platform image with GitHub Actions](https://docs.docker.com/build/ci/github-actions/multi-platform/)
 * `12~17` 行的部分是執行登入 GitHub Container Registry 的動作，若您是想將 image 推上 Docker Hub，請將該段落修改成如下內容，並在專案 repo 設定處設定相關 secrets：
 ```yaml title="publish.yml" startLineNumber=12
       - name: Login to Docker Hub
@@ -222,7 +222,7 @@ docker run -d --name <container-name> -p 3000:3000 --restart=unless-stopped ghcr
 ```
 :::note
 * `<container-name>` 請替換成您想要設定的容器名稱。
-* `-p 3000:3000` 的部分是設定容器的 port，左邊的 `3000` 是您想要設定的 port，右邊的 `3000` 是 image 內部的 port，若您的主機上的 `3000` port 已經被使用，請將左邊的 port 改為其他 port。若您使用 Cloudflare Tunnel，則可以省略此部分，在 Tunnel 設定時僅需 protocol 切換成 `http`，IP 直接輸入 `<container-IP>:3000` 即可，`<container-IP>` 可以使用 `docker inspect <container-name> | grep "IPAddress"` 指令查看。
+* `-p 3000:3000` 的部分是設定容器的 port，左邊的 `3000` 是您想要設定的 port，右邊的 `3000` 是 container 內部的 port，若您的主機上的 `3000` port 已經被使用，請將左邊的 port 改為其他 port。若您使用 Cloudflare Tunnel，則可以省略此參數，稍後在 Tunnel 設定時僅需 protocol 設定成 `http`，IP 直接輸入 `<container-IP>:3000` 即可，`<container-IP>` 可以使用 `docker inspect <container-name> | grep "IPAddress"` 指令查看，或前往維運面版的 Docker 管理相關頁面查看。
 :::
 確定容器執行成功後，請進行端口映射或者 Cloudflare Tunnel 設定。在完成設定後，輸入域名或者 IP 即可看到您的網站。
 ## Wrapping Up

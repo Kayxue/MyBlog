@@ -1,7 +1,11 @@
 friend:
-  - title: 'Astro'
-    imgurl: 'https://avatars.githubusercontent.com/u/44914786?s=48&v=4'
-    desc: 'The web framework for content-driven websites. ⭐️ Star to support our work!'
-    siteurl: 'https://github.com/withastro/astro'
+  - title: "Astro"
+    imgurl: "https://avatars.githubusercontent.com/u/44914786?s=48&v=4"
+    desc: "The web framework for content-driven websites. ⭐️ Star to support our work!"
+    siteurl: "https://github.com/withastro/astro"
     tags:
-      - '框架'
+      - "框架"
+  - title: "伊卡的记事本"
+    imgurl: "https://ikamusume7.org/avatar.webp"
+    desc: "又菜又爱学"
+    siteurl: "https://ikamusume7.org"
