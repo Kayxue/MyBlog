@@ -42,6 +42,9 @@ After I toggle the switch when server down, the app throws SocketException: conn
 ![](https://cdn-images-1.medium.com/max/1600/1*zhOjv_-SLJMbbAlmKWMCUg@2x.png)
 可見這個問題 AI 似乎已經不知道怎麼處理了，且該問題並不是這樣處理的，所以我只好先把程式碼還原，並開始自己處理。
 首先找到了模組的網站，發現剛剛他是裝舊版的，所以先使用 `flutter pub add web_socket_channel` 進行了模組更新。
+
+https://pub.dev/packages/web_socket_channel
+
 ![](https://cdn-images-1.medium.com/max/1600/1*ZIdLgCNwO6gHMuSwusYlhw@2x.png)
 接下來就是找整個的問題所在，既然是連線出問題，稍微看了一下 Flutter 官方的教學，知道了進行連線的方法是 `WebSocketChannel#connect` ，所以在 docs 裡找 `WebSocketChannel` 類別的 `connect` 方法或許會有相關線索。幸運的是我稍微找一下就挖到了，並且從下圖可以看到該方法是一個 static method:
 ![](https://cdn-images-1.medium.com/max/1600/1*IrAnuPhAXnsgL59Ex__1EA@2x.png)

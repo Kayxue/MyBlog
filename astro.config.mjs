@@ -23,6 +23,7 @@ import { pluginLanguageBadge } from "./src/plugins/expressive-code/language-badg
 import { pluginCollapsibleSections } from "@expressive-code/plugin-collapsible-sections";
 import { pluginLineNumbers } from "@expressive-code/plugin-line-numbers";
 import { pluginFileIcons } from "@xt0rted/expressive-code-file-icons";
+import fuwariLinkCard from "./src/plugins/fuwari-link-card.ts";
 
 import yaml from "@rollup/plugin-yaml";
 import expressiveCode from "astro-expressive-code";
@@ -86,6 +87,9 @@ export default defineConfig({
           },
         },
       },
+    }),
+    fuwariLinkCard({
+      internalLink: { enabled: true },
     }),
   ],
   markdown: {
