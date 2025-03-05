@@ -22,6 +22,7 @@ import { expressiveCodeConfig } from "./src/config.ts";
 import { pluginLanguageBadge } from "./src/plugins/expressive-code/language-badge.ts";
 import { pluginCollapsibleSections } from "@expressive-code/plugin-collapsible-sections";
 import { pluginLineNumbers } from "@expressive-code/plugin-line-numbers";
+import { pluginFileIcons } from "@xt0rted/expressive-code-file-icons";
 
 import yaml from "@rollup/plugin-yaml";
 import expressiveCode from "astro-expressive-code";
@@ -72,6 +73,10 @@ export default defineConfig({
         pluginLineNumbers(),
         pluginCollapsibleSections(),
         pluginLanguageBadge(),
+        pluginFileIcons({
+          iconClass: "text-4 w-5 inline mr-1 mb-1",
+          titleClass: "",
+        }),
       ],
       defaultProps: {
         wrap: true,
