@@ -6,7 +6,7 @@ COPY . .
 RUN bun install
 RUN bun run build
 
-FROM joseluisq/static-web-server:2
+FROM ghcr.io/kayxue/actixstaticserve:latest
 
 WORKDIR /
 
