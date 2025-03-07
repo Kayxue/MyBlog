@@ -17,7 +17,7 @@ export const siteConfig: SiteConfig = {
   },
   banner: {
     enable: true,
-    src: "assets/images/banner.JPG", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+    src: "assets/images/banner.webp", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
     position: "center", // Equivalent to object-position, only supports 'top', 'center', 'bottom'. 'center' by default
     credit: {
       enable: true, // Display the credit text of the banner image
@@ -54,7 +54,7 @@ export const navBarConfig: NavBarConfig = {
 };
 
 export const profileConfig: ProfileConfig = {
-  avatar: "assets/images/avatar.jpg", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+  avatar: "assets/images/avatar.webp", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
   name: "KayXue",
   bio: "The most beautiful things in the world are not seen or even heard, but are felt with the heart.",
   links: [
