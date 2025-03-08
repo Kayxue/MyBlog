@@ -3,7 +3,7 @@ title: Discord.js-Framwork-Typescript 使用教學
 published: 2021-08-10
 description: Discord.js-Framwork-Typescript 框架使用教學
 tags: [Discord, Discordjs, Framwork, TypeScript]
-category: Guide
+category: Framework
 draft: false
 ---
 
@@ -98,9 +98,9 @@ class w extends Commands { //類別名稱可自取
 export default function setup(bot: Client) {
     //實例化類別，此例類別為w(bot 必要傳入參數)，classname 非必要傳入(該 cog 名稱)
     let commands = new w(bot, "classname")
-    
+
     /*指令與事件監聽器撰寫處*/
-    
+
     bot.AddCog(commands)
 }
 ```
@@ -111,7 +111,7 @@ export default function setup(bot: Client) {
     let w2 = commands.command(async function w(msg: Message, ...text: string[]) {
         await msg.channel.send(text.join(" "))
     }, { aliases: ["ee", "ww"] })
-    
+
     /*發生錯誤處理*/
     w2.error((msg:Message, error) => {
         console.log(error)
@@ -152,19 +152,19 @@ command函式第一個傳入參數可為具名函式或匿名函式（含箭頭�
     e.error(async function (msg: Message, error) {
         msg.channel.send(error.toString())
     })
-    
+
     /*撰寫指令群組指令*/
     let r = e.command(async function rr(msg: Message, x: string) {
         commands.is_owner(msg)
         commands.bot
         await msg.channel.send("e.r")
     }, { aliases: ["ep", "qq"] })
-    
+
     /*撰寫指令群組指令錯誤處理*/
     r.error((msg: Message, error) => {
         msg.channel.send(error.toString())
     })
-    
+
     /*撰寫指令群組指令*/
     e.command(function ww(message: Message) {
         message.member.voice.channel.join().then(voicechannel => {
@@ -198,7 +198,7 @@ command函式第一個傳入參數可為具名函式或匿名函式（含箭頭�
     commands.listener(function message(message: Message) {
         console.log(`on_message:${message.author.tag}:${message.content}`)
     })
-    
+
     commands.listener((msg: Message) => {
         console.log("OK")
     }, { event: "message" })
@@ -220,16 +220,3 @@ command函式第一個傳入參數可為具名函式或匿名函式（含箭頭�
 ### 官方文件：
 ![](https://i.imgur.com/0HUF5om.png)
 :::
-
-
-    
-
-
-
-
-
-
-
-
-
-
