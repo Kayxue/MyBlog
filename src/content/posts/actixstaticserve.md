@@ -6,7 +6,7 @@ tags: [Docker, Static Site, Hosting]
 category: Container
 draft: false
 ---
-這個是一個本人製作的 docker image，這個 docker image 可以讓你非常容易在 docker 上部署您的靜態網站，起初這個部分是我部落格專案的一部分，但為了部署可以順暢，故本人將此部分從本人的部落格專案獨立出來，也順便將打包過後的 image 分享出去，讓可能需要用的人可以使用。並且因為使用 Actix-web，所以執行時所佔資源極低，並且壓縮完 image 只有大約 1.02KB 左右，所以個人感覺此 image 非常適合使用在單板電腦上，各位想試用看看的話非常歡迎喔！
+這個是一個本人製作的 Docker image，這個 Docker image 可以讓你非常容易在 Docker 上部署您的靜態網站，起初這個部分是我部落格專案的一部分，但為了部署可以順暢，故本人將此部分從本人的部落格專案獨立出來，也順便將打包過後的 image 分享出去，讓可能需要用的人可以使用。並且因為使用 Actix-web，所以執行時所佔資源極低，並且壓縮完 image 只有大約 1.02KB 左右，所以個人感覺此 image 非常適合使用在單板電腦上，各位想試用看看的話非常歡迎喔！
 ::github{repo="Kayxue/ActixStaticServe"}
 :::warning
 * **無自訂：** 此 image 目前並不支援自訂任何 server 相關設定。伺服器預設監聽位置為 `0.0.0.0:3000`，並且預設 serving `/public` 資料夾
