@@ -9,7 +9,7 @@ draft: false
 ---
 這次的話是第二次的 Flutter 課程作業，作業可以兩個挑一個，一個是打造吸睛的 about 頁面，一個是模仿上架的 App，個人因為 about page 不知道要做什麼，而且本人有 Windows 電腦，所以一直都要面對需要將 iPhone 檔案傳至 Windows 電腦的狀況，後來遇到了一個 Youtuber 推薦了 Landrop App，讓使用者可以輕鬆跨平台傳送檔案，個人用了也覺得非常不錯，所以這次作業就決定模仿一下 Landrop App 的介面。
 
-而這次的作業雖然是只要一個頁面就好，但......因為作業規定必須使用的 Widget 中有一個 Widget 在僅模仿一個 page 的狀況下無法做到，故這次基本上把三個 tab 量的 page 全部刻了。
+而這次的作業雖然是只要一個頁面就好，但......因為作業規定必須使用的 widget 中有一個 widget 在僅模仿一個 page 的狀況下無法做到，故這次基本上把三個 tab 量的 page 全部刻了。
 
 ## Original App Interface
 ![](./originalapp/1.png)
@@ -26,7 +26,7 @@ draft: false
 * `Components`：放置小型元件 (e.g. Circle IconButton, ListTile Card)
 * `Pages`：放置頁面 (那些真正完整的頁面)
 * `Types`：放置類型 (e.g. custom enumerations)
-* `Widgets`：放置頁面上部分體積較大的 Widget
+* `Widgets`：放置頁面上部分體積較大的 widget
 ![](./Directory.png)
 
 ## Code Explanation
@@ -851,7 +851,6 @@ class FilesPage extends StatelessWidget {
 1. 因為一個 widget 在中間，另一個在右側，故個人感覺相較於使用 `SizedBox` 和 `Row`，用 `Stack` 是比較好的選擇，因為位置會比較精準。
 2. 因為是固定在正中間，所以用 `Align` 來進行定位，因為 Stack 大小不知道。
 3. 因為知道確切的位置，所以可以使用 `Positioned` 進行定位，而下拉式選單按鈕一樣使用 `MenuAnchor`。
-4. `78` 行處折疊是因為相同的 widget，有興趣者請自行展開。
 :::
 ### Settings
 設定頁面的部分，位於 `Pages/SettingsPage.dart`。
@@ -1047,7 +1046,6 @@ class _SettingsPageState extends State<SettingsPage> {
 3. 因為要使部分 widget 可以滾動，故使用 `SingleChildScrollView`，以確保內容可以垂直滾動，`Expanded`的部分也是一樣，如果不加會無法顯示。
 4. 兩個皆為自定義 widget/component，稍後皆會展示
 5. `DropdownButton` 部分為下拉式選單，選項部分可透過 `items` 屬性填入，而`DropdownMenuItem` 是下拉選單的選項。而最後 value 部分下拉式選單的值，並且與對應設定值綁定。
-6. 折疊的部分為類似元件，有興趣者請自行展開。
 :::
 接下來就是 `UserInfo`，檔案在 `Widgets/Settings` 資料夾中。
 ```dart title="UserInfo.dart" {"2.":25-31}
