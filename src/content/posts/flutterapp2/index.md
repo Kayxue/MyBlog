@@ -858,7 +858,7 @@ class FilesPage extends StatelessWidget {
 import 'package:flutter/material.dart';
 import 'package:landroppage/Types/Language.dart';
 
-import '../Widgets/Settings/SettingsList.dart';
+import '../Components/SettingsList.dart';
 import '../Widgets/Settings/UserInfo.dart';
 
 class SettingsPage extends StatefulWidget {
