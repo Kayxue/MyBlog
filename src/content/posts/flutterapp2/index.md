@@ -220,7 +220,7 @@ class _NavigationWidgetState extends State<NavigationWidget> {
 ```
 :::note[解析]
 1. 因為需要記錄目前所在的頁面，所以其必須為 `StatefulWidget`。
-2. 接下來就是透過 `Scaffold` 的 `bottomNavigationBar` 屬性，在頁面中加入 `AppBar`，AppBar 部分使用 `NavigationBar` widget 建立。
+2. 接下來就是透過 `Scaffold` 的 `bottomNavigationBar` 屬性，在頁面中加入 AppBar，AppBar 部分使用 `NavigationBar` widget 建立。
 3. 在 `52~56` 行的部分是設定當使用者點選 bar 上的按鈕時，會切換頁面。
 4. 而 `59~75` 的部分是設定在 `NavigationBar` 上會顯示的頁面切換按鈕。
 5. 最後 `77~84` 是設定顯示頁面主體，這裡透過 `SafeArea` widget 包裝，確保頁面內容不會被系統元件遮擋。然後透過 `currentPageIndex` 來決定顯示哪個頁面。
@@ -615,7 +615,7 @@ class NearbyDevices extends StatelessWidget {
 }
 ```
 :::note[解析]
-1. `26~33` 行：在使用者按下按鈕後，會從畫面底部彈出一個 Dialog，顯示關於該功能的一些資訊。
+1. `26~33` 行：在使用者按下按鈕後，會從畫面底部彈出一個 dialog，顯示關於該功能的一些資訊。
 2. `30` 行的 `ModalBottomSheet` 稍後會展示
 :::
 最後是 Transfers 部分，用於顯示 Transfers 區塊的版面。
@@ -707,7 +707,7 @@ class Transfers extends StatelessWidget {
 ```
 :::note[解析]
 1. `12` 行的 `bottom` 部分是使畫面完全滑到底時，底部可以稍微留白，讓使用者看起來更舒服。
-2. `28` 行的 `NeverScrollableScrollPhysics()` 是讓 ListView 不可滾動，因為在 parent widget 中已經在外層套了 `SingleChildScrollView`，這裡得設定不能滾動。
+2. `28` 行的 `NeverScrollableScrollPhysics()` 是讓 `ListView` 不可滾動，因為在 parent widget 中已經在外層套了 `SingleChildScrollView`，這裡得設定不能滾動。
 3. `37` 行處折疊是因為相同的 widget，有興趣者請自行展開。
 :::
 ### Files
@@ -1043,9 +1043,9 @@ class _SettingsPageState extends State<SettingsPage> {
 :::note[解析]
 1. 因為要記錄設定值，故需要使用 `StatefulWidget`
 2. 宣告 state 已儲存設定值，`ThemeMode` 和 `Language` 為 enumeration，分別表示顯示主題與顯示語言，稍後會展示。
-3. 因為要使部分 widget 可以滾動，故使用 `SingleChildScrollView`，以確保內容可以垂直滾動，`Expanded`的部分也是一樣，如果不加會無法顯示。
+3. 因為要使部分 widget 可以滾動，故使用 `SingleChildScrollView`，以確保內容可以垂直滾動，`Expanded` 的部分也是一樣，如果不加會無法顯示。
 4. 兩個皆為自定義 widget/component，稍後皆會展示
-5. `DropdownButton` 部分為下拉式選單，選項部分可透過 `items` 屬性填入，而`DropdownMenuItem` 是下拉選單的選項。而最後 value 部分下拉式選單的值，並且與對應設定值綁定。
+5. `DropdownButton` 部分為下拉式選單，選項部分可透過 `items` 屬性填入，而 `DropdownMenuItem` 是下拉選單的選項。而最後 value 部分下拉式選單的值，並且與對應設定值綁定。
 :::
 接下來就是 `UserInfo`，檔案在 `Widgets/Settings` 資料夾中。
 ```dart title="UserInfo.dart" {"2.":25-31}
