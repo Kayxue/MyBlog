@@ -1048,7 +1048,7 @@ class _SettingsPageState extends State<SettingsPage> {
 5. `DropdownButton` 部分為下拉式選單，選項部分可透過 `items` 屬性填入，而`DropdownMenuItem` 是下拉選單的選項。而最後 value 部分下拉式選單的值，並且與對應設定值綁定。
 6. 折疊的部分為類似元件，有興趣者請自行展開。
 :::
-接下來就是`UserInfo`，檔案在 `Widgets/Settings` 資料夾中。
+接下來就是 `UserInfo`，檔案在 `Widgets/Settings` 資料夾中。
 ```dart title="UserInfo.dart" {"2.":25-31}
 import 'package:flutter/material.dart';
 import 'package:device_friendly_name/device_friendly_name.dart';
