@@ -453,7 +453,7 @@ class Devices extends StatelessWidget {
   }
 }
 ```
-因為按鈕與文字所在位置分別為頭和尾，故可以維持使用 `Row` 佈局，以達到更好的版面效果。而 MenuAnchor 的部分是下拉式選單，因為有設定偏好 Material 3 的風格，所以使用 `MenuAnchor`。而關於外觀的部分則已經在 `main.dart` 中設定：
+因為按鈕與文字所在位置分別為頭和尾，故可以維持使用 `Row` 佈局，以達到更好的版面效果。而 `MenuAnchor` 的部分是下拉式選單，因為有設定偏好 Material 3 的風格，所以使用 `MenuAnchor`。而關於外觀的部分則已經在 `main.dart` 中設定：
 ```dart title="main.dart" collapse={1-18,33-87} {22-31}
 import 'package:flutter/material.dart';
 import 'Pages/FilesPage.dart';
