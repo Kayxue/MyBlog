@@ -1102,6 +1102,7 @@ class _UserInfoState extends State<UserInfo> {
 2. 因為要符合作業要求使用 `Image` widget，所以才使用這種寫法設定 `CircleAvatar` 中顯示的圖片，在普通狀況下直接將圖片資訊填入 `CircleAvatar` 的 `backgroundImage` 屬性即可，不需要寫得如此彆扭。
 :::
 ### Components
+相關檔案皆放置於 `Components` 資料夾中
 #### CircleButton
 用於顯示那些有顏色底且下方有按鈕描述的圓形 IconButton。
 ```dart title="CircleButton.dart" {"1.":21-33} {"2.":35-45}
