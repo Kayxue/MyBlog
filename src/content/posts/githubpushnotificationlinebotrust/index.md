@@ -6,7 +6,7 @@ tags: [Line Bot, Rust, GitHub, Webhook]
 category: Docker
 draft: false
 ---
-由於去年上學期的軟體工程課程，我們很多組員都還在用 Line 群組進行討論與溝通，因為組員互相不太認識，並且因為其他組員多為學長姐，所以當初寫了這個的初始版本，讓他們可以更方便追蹤專案程式碼撰寫進度，但後來有一天突然好奇如果使用 Rust 來寫會是怎樣一個體驗，所以後來自己決定將初始版本以 Rust 重新撰寫，並結合 GitHub CI 與 Rust 可編譯成 zero-dependency 執行檔的優勢，也順便做出了可直接部署的 Docker Image，除了讓自己未來需要使用時可以使用外，也可以讓需要的人一起使用。
+由於去年上學期的軟體工程課程，我們很多組員都還在用 Line 群組進行討論與溝通，因為組員互相不太認識，並且因為其他組員多為學長姐，所以當初寫了這個的初始版本，讓他們可以更方便追蹤專案程式碼撰寫進度，但後來有一天突然好奇如果使用 Rust 來寫會是怎樣一個體驗，所以自己決定寫一個將初始版本以 Rust 重新撰寫的版本，並結合 GitHub CI 與 Rust 可編譯成 zero-dependency 執行檔的優勢，也順便做出了可直接部署的 Docker Image，除了讓自己未來需要使用時可以使用外，也可以讓需要的人一起使用。
 ::github{repo="Kayxue/GitHubPushNotificationLineBotRust"}
 如果想要看初始版本的也歡迎，初始版本除了可以部署至 [Deno Deploy](https://deno.com/deploy) 外，也可以自行 fork 修改並部署至 Docker，想提 Pull Request 也非常歡迎喔！
 ::github{repo="Kayxue/GitHubPushNotificationLineBot"}
