@@ -1,7 +1,7 @@
 ---
 title: GitHubPushNotificationLineBotRust 使用教學
 published: 2025-03-11
-description: GitHubPushNotificationLineBotRust Docker Image 使用教學
+description: 如何使用 GitHubPushNotificationLineBotRust 專案來將 GitHub 專案的 Push Webhook 推送到 Line。
 tags: [Line Bot, Rust, GitHub, Webhook]
 category: Docker
 draft: false
