@@ -55,8 +55,10 @@ docker run --name <container_name> -p 3000:3000 -e ACCESSTOKEN=<LINE_BOT_ACCESS_
 3. **SSL verification**：請選 `Disable`
 4. **Which event would you like to trigger this webhook?**：請選 `Just the push event`
 ![](./addwebhookpage.png)
+
 確定填入資料皆正確後，即可按下下方 `Add webhook` 新增 Webhook，確認你剛剛新增的 Webhook 是否成功。
 ![](./checkwebhook.png)
+
 成功之後就可以開始修改你的專案，並且在每一次發生 push 時，都會收到 Line Bot 的通知。
 ![](./notification.jpg)
 ## Contribution
