@@ -297,9 +297,15 @@ class _TopbarState extends State<Topbar> {
             future: _getDeviceName(),
             builder: (context, snapshot) {
               if (snapshot.hasData) {
-                return Text(
-                  "Hello ${snapshot.data} 👋",
-                  style: TextStyle(fontSize: 24),
+                return SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.6,
+                  child: Text(
+                    "Hello ${snapshot.data} 👋",
+                    style: TextStyle(fontSize: 24),
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 1,
+                    softWrap: false,
+                  ),
                 );
               }
               return Text("Hello, User 👋", style: TextStyle(fontSize: 24));
@@ -323,7 +329,7 @@ class _TopbarState extends State<Topbar> {
   }
 }
 ```
-因為 `device_friendly_name` 模組需要透過非同步的方式去抓取裝置名稱，故需要使用 `StatefulWidget` 和 `FutureBuilder`，透過非同步的方式，將裝置名稱顯示在畫面上。間隔部分只設定頂部間隔，因為左右已經在 `HomePage` 中設定。
+因為 `device_friendly_name` 模組需要透過非同步的方式去抓取裝置名稱，故需要使用 `StatefulWidget` 和 `FutureBuilder`，透過非同步的方式，將裝置名稱顯示在畫面上，且由於避免裝置名稱過長造成 widget 溢出，故顯示裝置名稱的 widget 需要使用 `SizedBox` 包起來，並指定當長度超過螢幕寬度的 60% 時將內容自動截斷。間隔部分只設定頂部間隔，因為左右已經在 `HomePage` 中設定。
 
 其次是 Send 部分，用於顯示 Send 區塊的版面。
 ```dart title="Send.dart" collapse={28-45}
