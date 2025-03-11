@@ -17,9 +17,15 @@ draft: false
 ![](./originalapp/3.png)
 
 ## My App Interface
+### iOS (Device: iPhone 12 Pro Max)
 ![](./myapp/1.png)
 ![](./myapp/2.png)
 ![](./myapp/3.png)
+
+### Android (Device: Sony Xperia XZ2 Premium)
+![](./myappandroid/1.png)
+![](./myappandroid/2.png)
+![](./myappandroid/3.png)
 
 ## Directory Structure
 首先來看這次資料夾結構的部分，因為這次元件量其實是不少的，所以這次只好在目前上課還沒教到的狀況下，直接開始對所有的專案檔案進行分類存放。資料夾分類如下：
