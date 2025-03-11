@@ -61,5 +61,6 @@ docker run --name <container_name> -p 3000:3000 -e ACCESSTOKEN=<LINE_BOT_ACCESS_
 
 成功之後就可以開始修改你的專案，並且在每一次發生 push 時，都會收到 Line Bot 的通知。
 ![](./notification.jpg)
+
 ## Contribution
 此專案歡迎各位進行貢獻，使專案更加完整，貢獻專案時請遵守 [Code of Conduct](https://www.rust-lang.org/policies/code-of-conduct)。
