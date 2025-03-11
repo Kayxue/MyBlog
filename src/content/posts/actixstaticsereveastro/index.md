@@ -3,7 +3,7 @@ title: ActixStaticServe 實戰－架設 Astro 靜態網站
 published: 2025-03-04
 description: ActixStaticServe 架設 Astro 靜態網站教學
 tags: [Docker, Static Site, Hosting]
-category: Server & Web
+category: Web
 draft: false
 ---
 在[上一篇文章](/posts/actixstaticserve/)中，我大概介紹了本人製作的 ActixStatic Docker image 簡單的使用方法，但是在實務上，如果每次都要手動將網頁專案 build 好，再將靜態網站檔案放入資料夾，然後自己手動下指令 build image 將打包好的 image 上傳至 registry，這其實是非常麻煩的一件事，所以這次的文章將會以 Astro 靜態網站為例，介紹如何在使用前端框架的專案中，使用此 image 與使用 GitHub Actions 自動化 build image 流程，將 image 上傳至 registry，並在目標裝置上架設網站。

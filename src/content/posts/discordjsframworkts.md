@@ -3,7 +3,7 @@ title: Discord.js-Framwork-Typescript 使用教學
 published: 2021-08-10
 description: Discord.js-Framwork-Typescript 框架使用教學
 tags: [Discord, Discordjs, Framwork, TypeScript]
-category: Framework
+category: Development
 draft: false
 ---
 
