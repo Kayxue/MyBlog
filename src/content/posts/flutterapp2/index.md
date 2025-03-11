@@ -22,7 +22,7 @@ draft: false
 ![](./myapp/2.png)
 ![](./myapp/3.png)
 
-### Android (Device: Sony Xperia XZ2 Premium)
+### Android (Device: Sony Xperia XZ2 Premium, Lineage OS 21)
 ![](./myappandroid/1.png)
 ![](./myappandroid/2.png)
 ![](./myappandroid/3.png)
