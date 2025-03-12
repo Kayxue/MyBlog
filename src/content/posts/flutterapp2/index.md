@@ -630,7 +630,7 @@ class NearbyDevices extends StatelessWidget {
 1. `26~33` 行：在使用者按下按鈕後，會從畫面底部彈出一個 dialog，顯示關於該功能的一些資訊。
 2. `30` 行的 `ModalBottomSheet` 稍後會展示
 :::
-最後是 Transfers 部分，用於顯示 Transfers 區塊的版面。
+再來是 Transfers 部分，用於顯示 Transfers 區塊的版面。
 ```dart title="Transfers.dart" collapse={38-77} {"1.":12-12} {"2.":28-28}
 import 'package:flutter/material.dart';
 
@@ -721,6 +721,62 @@ class Transfers extends StatelessWidget {
 1. `12` 行的 `bottom` 部分是使畫面完全滑到底時，底部可以稍微留白，讓使用者看起來更舒服。
 2. `28` 行的 `NeverScrollableScrollPhysics()` 是讓 `ListView` 不可滾動，因為在 parent widget 中已經在外層套了 `SingleChildScrollView`，這裡得設定不能滾動。
 3. `37` 行處折疊是因為相同的 widget，有興趣者請自行展開。
+:::
+最後是 ModalBottomSheet，用於在點擊 `Nearby Device` 旁邊按鈕時，可以顯示關於此功能的底部 Dialog
+```dart title="ModalBottomSheet.dart" {29-44}
+import 'package:flutter/material.dart';
+
+class ModalBottomSheet extends StatelessWidget {
+  const ModalBottomSheet({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 220,
+      child: Padding(
+        padding: EdgeInsets.only(top: 20, left: 30, right: 30, bottom: 20),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Text("Nearby Devices", style: TextStyle(fontSize: 24)),
+                SizedBox(width: 10),
+                Badge(
+                  label: Text("BETA"),
+                  backgroundColor: Colors.blueAccent,
+                  textColor: Colors.white,
+                  padding: EdgeInsets.symmetric(horizontal: 8),
+                ),
+              ],
+            ),
+            SizedBox(height: 20),
+            Expanded(
+              child: Text(
+                "You can now send files to nearby devices, even if you're not connected to the same Wi-Fi network.",
+                style: TextStyle(
+                  fontSize: 14,
+                  color: Colors.grey.shade600,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+            Expanded(
+              child: Text(
+                "Heads up: If you're not connected to any Wi-Fi network and are using cellular data, be mindful of potential data charges.",
+                style: TextStyle(fontSize: 12, color: Colors.grey.shade600),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+```
+:::note[解析]
+因為要讓內容文字不會溢出，所以在內容文字部分外層需要加上 `Expanded` 讓文字可以自動換行顯示。
 :::
 ### Files
 檔案頁面的部分，位於 `Pages/FilesPage.dart`。
