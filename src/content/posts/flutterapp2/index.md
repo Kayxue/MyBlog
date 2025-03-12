@@ -720,7 +720,6 @@ class Transfers extends StatelessWidget {
 :::note[解析]
 1. `12` 行的 `bottom` 部分是使畫面完全滑到底時，底部可以稍微留白，讓使用者看起來更舒服。
 2. `28` 行的 `NeverScrollableScrollPhysics()` 是讓 `ListView` 不可滾動，因為在 parent widget 中已經在外層套了 `SingleChildScrollView`，這裡得設定不能滾動。
-3. `37` 行處折疊是因為相同的 widget，有興趣者請自行展開。
 :::
 最後是 ModalBottomSheet，用於在點擊 Nearby Device 旁邊按鈕時，可以顯示關於此功能的底部 Dialog
 ```dart title="ModalBottomSheet.dart" {29-44}
