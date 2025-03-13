@@ -37,6 +37,9 @@ cargo run
 ### Supported CPU Architecture
 * `linux/amd64`
 * `linux/arm64`
+### Image
+* `ghcr.io/kayxue/githubpushnotificationlinebotrust:latest`：一般穩定版本
+* `ghcr.io/kayxue/githubpushnotificationlinebotrustnightly:xitcanightly`：結合了 Rust 目前尚未完成的 [unsized_const_params](https://github.com/rust-lang/rust/issues/95174) feature 製作的版本，由於使用 nightly 分支的 rust toolchain 進行編譯，可能會相對比較不穩定，無法接受者請不要使用版本
 ### Deploy
 請遠端連線至要部署的裝置，並確保已經安裝好 Docker，輸入以下指令即可執行 Docker Image，`<container_name>` 請換成你想要的容器名稱，`<LINE_BOT_ACCESS_TOKEN>` 請替換成你自己的 Line Bot Access Token：
 ```bash title="Terminal"
