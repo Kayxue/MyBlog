@@ -1,10 +1,10 @@
 ---
 title: Flutter Development 番外－使用 Zed 的新開發體驗
-published: 2025-02-26
+published: 2025-03-16
 description: 如何在 MacOS 上使用 Zed 編輯器進行 Flutter 開發
 tags: [Flutter, Zed]
 category: Development
-draft: true
+draft: false
 ---
 這個編輯器其實我已經在些許年前就聽過它了，只是因為該編輯器無法新增編輯器背景，所以才沒有用，不過隨著後來看到了 Rust 程式的強悍，而 Zed 也是使用 Rust 製作的，而且我身邊也有些人也開始雪則使用 Zed 進行程式開發，所以我也下載了下來，用了也覺得不錯。而最近也看到了部落客彼得寫了一篇文章[使用 Zed IDE 的 AI 提示寫文章](https://medium.com/%E5%BD%BC%E5%BE%97%E6%BD%98%E7%9A%84-swift-ios-app-%E9%96%8B%E7%99%BC%E6%95%99%E5%AE%A4/%E4%BD%BF%E7%94%A8-zed-ide-%E7%9A%84-ai-%E6%8F%90%E7%A4%BA%E5%AF%AB%E6%96%87%E7%AB%A0-b6840c01400d)，所以本人覺得這次就來研究如何在 Mac 上使用 Zed 開發 Flutter 程式吧！
 ## Before You Start
@@ -185,6 +185,11 @@ zed .
 ![](./flutterrun.png)
 本人在此選擇 macOS，選擇後，程式就成功執行了
 ![](./runapp.png)
+
+:::note
+iOS 的話會需要進行修改 Bundle Identifier 等設定，詳細請參考[官方文件](https://docs.flutter.dev/get-started/install/macos/mobile-ios#configure-your-target-ios-device)
+:::
+
 並且在 Zed 中的下方執行視窗中，可以看到你可以執行哪些指令，包括 hot reload、重啟程式、終止等，還有 DevTools 的連結
 ![](./runcommands.png)
 ### Fluttermon - Auto Reload When File Saved
@@ -209,4 +214,25 @@ fluttermon -d <device-name>
 在 App 執行後，回到 `lib/main.dart` 檔案，按一下 `Cmd + S` 儲存，就可以看到專案自動 hot reload 了！
 ![](./hotreload.png)
 
+只是需要注意一下的是：如果要執行指令的話（例如：`R` 重啟程式），需要輸入對應指令字母後，按下 `Enter` 才會執行，不會像剛剛按下鍵盤上對應指令字母後就會馬上執行。
+
 ### Code With AI
+AI 的部分的話有分三種：聊天、補全、直接改。
+
+聊天的話在 Zed 中按 `Cmd + Shift + P` 開啟指令框，找到 `assistant: new chat` 即可開啟聊天框
+![](./aichat.png)
+![](./zedchat.png)
+
+補全的話是你可以寫部分程式碼，或者寫程式碼註解，AI 會幫你生成程式碼，按 `Tab` 或 `Opt + Tab` 即可插入
+![](./commentai.png)
+
+直接改的部分的話是可以請 AI 直接幫你修改程式碼，如果要使用的話，請選擇你想要修改區域，按下快速鍵 `Ctrl + Enter` 即可開啟 inline assistant，然後輸入你想請他改什麼，按下 `Enter` 後他就會幫你自動處理： 
+![](./inlineassistant1.png)
+例如我選了一整個 `Scaffold`，然後請他在裡面的 counter 下方加入一個可以顯示現在計數器奇偶的一個 `Text`
+![](./inlineassistant2.png)
+按下 `Enter` 鍵後，他會開始修改，修改過的地方他會用顏色進行標記：
+![](./inlineassistant3.png)
+再按下 `Enter` 即可接受變更
+
+## Wrapping Up
+由此可見 Zed 其實是一款不錯的編輯器，並且使用下來個人也覺得該編輯器真的是非常的順暢，果真是用 Rust 寫的軟體，而且內建 AI 幫助模式除了聊天外，也有註解、寫程式碼的方式，而且直接改的方式也很好的保護了使用者的隱私，只讓使用者傳他想要傳的程式碼過去，而不是一傳就是傳整個檔案。雖然說對於 Flutter 部分，目前 Zed 沒有提供非常好的支援，但是畢竟現在好像還在測試，所以個人感覺這一部分其實是可以體諒的，相信在 Zed 未來對 Flutter 支援度更好之後，或許就會有更多人使用這款軟體開發 Flutter 了。
