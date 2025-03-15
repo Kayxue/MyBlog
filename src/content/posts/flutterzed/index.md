@@ -152,3 +152,61 @@ flutter doctor --android-licenses
 ```
 中途狂按 `y` 即可，完成後輸入 `flutter doctor`，確認 `Android toolchain` 左側已打勾即安裝完成
 ![](./flutterdoctorandroid.png)
+
+## Start Development
+### Create Project
+首先我們要先建立專案。以往各位在 VSCode 開發時，基本上都會直接使用 Flutter extension 提供的指令功能直接建立專案，很少會直接使用 Flutter 的終端機指令直接建立專案，但是在 Zed 裡，由於缺乏 Flutter extension，我們只能直接使用終端機指令直接建立專案。首先先開啟終端機，切換到你想儲存專案的資料夾，然後輸入以下指令
+```bash title="Terminal"
+flutter create myapp
+```
+![](./createproject.png)
+
+專案建立完成之後請切換到專案資料夾下，然後在 Zed 中開啟專案：
+```bash title="Terminal"
+cd myapp
+zed .
+```
+### Install Dart Extension
+開啟後在左側 dock 打開 `lib/main.dart` 即可開始編輯，不過......是不是好像少了什麼東西？
+![](./nocolorcode.png)
+沒錯，就是 Dart extension，因為他預設沒有支援 Dart，所以我們需要安裝 Dart extension。首先我們需要按下 `Cmd + Shift + P`，然後在彈出的列表中找到 `zed: extensions` 按下 `Enter`
+![](./zedextension.png)
+在 Extensions 頁面中的搜尋中輸入關鍵字即可找到 `Dart` 模組，點右側的 `Install` 即可安裝
+![](./installdart.png)
+安裝完後回到 `lib/main.dart` 即可看到目前的程式碼已經有顏色了，並且在 `main` 旁邊已經多一個執行的按鈕
+![](./colorcode.png)
+### Run Project
+點一下 `void main` 旁的按鈕會出現一個列表，按下 `flutter run` 即可執行專案
+![](./runproject.png)
+:::note
+第二個選項 fvm 是一個可以管裡多個版本的 Flutter 工具，它除了可以為每個專案設定各自使用的 Flutter SDK 版本，也能讓你非常容易的將專案切到新版本的 Flutter SDK 中進行測試。由於篇幅關係，此工具本文不介紹，有興趣者各位可以參考 [fvm 官網](https://fvm.app/)
+:::
+點擊之後，下方就會出現一個執行視窗，請選擇你要在哪個裝置上執行
+![](./flutterrun.png)
+本人在此選擇 macOS，選擇後，程式就成功執行了
+![](./runapp.png)
+並且在 Zed 中的下方執行視窗中，可以看到你可以執行哪些指令，包括 hot reload、重啟程式、終止等，還有 DevTools 的連結
+![](./runcommands.png)
+### Fluttermon - Auto Reload When File Saved
+有熱載入其實蠻不錯，只是剛剛在執行時各位應該會發現當你修改完檔案並儲存後，必須切回視窗按一下 `r` 進行 hot reload，這其實有點不方便，所以接下來就來補足這缺憾吧！
+
+首先，我們先輸入以下指令安裝 fluttermon：
+```bash title="Terminal"
+flutter pub global activate fluttermon
+```
+因為我們是第一次安裝並執行從 pub 下載的可執行模組，故我們需要開啟 `~/.zshrc`，並在裡面加入這行：
+```
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+```
+修改並儲存後，在 Zed 中重開一個終端機，先確認可執行的裝置：
+```bash title="Terminal"
+flutter devices
+```
+確定好要執行的裝置後，即可輸入以下指令執行 App：
+```bash title="Terminal"
+fluttermon -d <device-name>
+```
+在 App 執行後，回到 `lib/main.dart` 檔案，按一下 `Cmd + S` 儲存，就可以看到專案自動 hot reload 了！
+![](./hotreload.png)
+
+### Code With AI
