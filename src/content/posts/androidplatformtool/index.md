@@ -1,6 +1,6 @@
 ---
 title: Android Platform Tools，測試應用程式與改機必備工具
-published: 2025-03-10
+published: 2025-03-16
 description: 簡介 Android Platform Tools 的功能，以及如何使用它們來測試應用程式、更新系統。
 tags: [Android, Platform Tools]
 category: App & Tools
@@ -9,10 +9,7 @@ draft: true
 還記得從不知道什麼時候開始，改機風潮興起，不少人開始紛紛研究改機，並分享自己的改機心得與技巧，在那改機盛行的年代，不管是自訂系統主題，還是取得 root 權限，甚至刷系統，基本上網路上都可以找到不少資源。不過隨著時間推移，改機變得越來越困難，從需要解鎖 Bootloader 到解鎖 Bootloader 需要等待一週，甚至有些廠商還把 Bootloader 直接給徹底鎖起來，不讓別人解鎖了。雖然改機潮慢慢減退了，不過現在 Android Platform Tools 還是一個非常重要的工具，它可以幫助我們解鎖 Bootloader、刷入其他系統、取得 root 權限，甚至測試應用程式、更新系統等，讓我們可以更方便地管理自己的 Android 裝置。
 ## Download & Install
 ### Using Without Installation
-可以直接從這裡下載即可，下載完成後解壓即可使用
-
-https://developer.android.com/tools/releases/platform-tools
-
+可以直接從[這裡](https://developer.android.com/tools/releases/platform-tools)下載即可，下載完成後解壓即可使用
 ### Installation
 #### Windows
 可直接安裝 `ADB & Fastboot++`
