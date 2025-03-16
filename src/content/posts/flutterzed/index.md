@@ -62,6 +62,8 @@ vim ~/.zshenv
 export PATH=$HOME/development/flutter/bin:$PATH
 ```
 
+![](./addfluttertopath.png)
+
 加入完成後按一下 `Esc`，然後輸入 `:wq` 寫入並退出，之後重啟終端機就完成了
 
 ### Install Xcode (iOS)
@@ -81,6 +83,7 @@ sudo sh -c 'xcode-select -s /Applications/Xcode.app/Contents/Developer && xcodeb
 ```bash title="Terminal"
 ruby --version
 ```
+![](./oldruby.png)
 如果版本為舊版（例如：2.6.10）請繼續進行以下步驟，若已經是最新版可直接跳過這部分。
 
 首先執行以下指令安裝 rbenv：
@@ -91,14 +94,16 @@ brew install rbenv
 ```bash title="Terminal"
 rbenv init
 ```
-查看可安裝的 Ruby 版本：
+查看最新穩定版的 Ruby：
 ```bash title="Terminal"
 rbenv install -l
 ```
+![](./listruby.png)
 找到最新的版本後，輸入以下指令安裝：
 ```bash title="Terminal"
 rbenv install 3.4.2
 ```
+![](./installruby.png)
 安裝好之後，輸入以下兩個指令指定預設 ruby 版本：
 ```bash title="Terminal"
 rbenv global 3.4.2
@@ -108,6 +113,7 @@ rbenv shell 3.4.2
 ```bash title="Terminal"
 ruby --version
 ```
+![](./newruby.png)
 ### Install CocoaPods (iOS)
 更新完 Ruby 後就可以安裝 CocoaPods 了，請再次確認您的 Ruby 已經更新完畢，否則等一下是有可能會安裝失敗的喔！
 
@@ -123,6 +129,8 @@ vim ~/.zshenv
 ```bash title="Terminal"
 export PATH=$HOME/.gem/bin:$PATH
 ```
+![](./addgempath.png)
+
 完成編輯後一樣按一下 `Esc`，然後輸入 `:wq` 一樣寫入並關閉檔案，並重啟終端機
 
 最後執行一下 `flutter doctor` 指令檢查一下，Xcode 左側出現勾勾即安裝完成
@@ -203,6 +211,7 @@ flutter pub global activate fluttermon
 ```
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 ```
+![](./addpubpath.png)
 修改並儲存後，在 Zed 中重開一個終端機，先確認可執行的裝置：
 ```bash title="Terminal"
 flutter devices
