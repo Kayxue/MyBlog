@@ -200,7 +200,7 @@ iOS 的話會需要進行修改 `Bundle Identifier` 等設定，詳細請參考[
 
 並且在 Zed 中的下方執行視窗中，可以看到你可以執行哪些指令，包括 hot reload、重啟程式、終止等，還有 DevTools 的連結
 ![](./runcommands.png)
-### Fluttermon - Auto Reload When File Saved
+### Fluttermon - Auto Reload when File Saved
 有熱載入其實蠻不錯，只是剛剛在執行時各位應該會發現當你修改完檔案並儲存後，必須切回視窗按一下 `r` 進行 hot reload，這其實有點不方便，所以接下來就來補足這缺憾吧！
 
 首先，我們先輸入以下指令安裝 fluttermon：
