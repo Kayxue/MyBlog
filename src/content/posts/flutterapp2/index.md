@@ -6,6 +6,7 @@ image: "./myapp/1.png"
 tags: [Flutter, Landrop, Imitation]
 category: Development
 draft: false
+series: "Flutter Homework"
 ---
 這次的話是第二次的 Flutter 課程作業，作業可以兩個挑一個，一個是打造吸睛的 about 頁面，一個是模仿上架的 App，個人因為 about page 不知道要做什麼，而且本人有 Windows 電腦，所以一直都要面對需要將 iPhone 檔案傳至 Windows 電腦的狀況，後來遇到了一個 Youtuber 推薦了 Landrop App，讓使用者可以輕鬆跨平台傳送檔案，個人用了也覺得非常不錯，所以這次作業就決定模仿一下 Landrop App 的介面。
 
