@@ -1,5 +1,5 @@
 ---
-title: Flutter Development Ex－使用 Zed 的新開發體驗
+title: Flutter Development Ex－使用 Zed 的開發新體驗
 published: 2025-03-16
 description: 如何在 MacOS 上使用 Zed 編輯器進行 Flutter 開發
 tags: [Flutter, Zed]
@@ -226,7 +226,7 @@ AI 的部分的話有分三種：聊天、補全、直接改。
 補全的話是你可以寫部分程式碼，或者寫程式碼註解，AI 會幫你生成程式碼，按 `Tab` 或 `Opt + Tab` 即可插入
 ![](./commentai.png)
 
-直接改的部分的話是可以請 AI 直接幫你修改程式碼，如果要使用的話，請選擇你想要修改區域，按下快速鍵 `Ctrl + Enter` 即可開啟 inline assistant，然後輸入你想請他改什麼，按下 `Enter` 後他就會幫你自動處理： 
+直接改的部分的話是可以請 AI 直接幫你修改程式碼，如果要使用的話，請選擇你想要修改區域，按下快速鍵 `Ctrl + Enter` 即可開啟 inline assistant，然後輸入你想請他改什麼，按下 `Enter` 後他就會幫你自動處理：
 ![](./inlineassistant1.png)
 例如我選了一整個 `Scaffold`，然後請他在裡面的 counter 下方加入一個可以顯示現在計數器奇偶的一個 `Text`
 ![](./inlineassistant2.png)
