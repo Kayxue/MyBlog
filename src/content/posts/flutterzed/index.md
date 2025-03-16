@@ -195,7 +195,7 @@ zed .
 ![](./runapp.png)
 
 :::note
-iOS 的話會需要進行修改 Bundle Identifier 等設定，詳細請參考[官方文件](https://docs.flutter.dev/get-started/install/macos/mobile-ios#configure-your-target-ios-device)
+iOS 的話會需要進行修改 `Bundle Identifier` 等設定，詳細請參考[官方文件](https://docs.flutter.dev/get-started/install/macos/mobile-ios#configure-your-target-ios-device)
 :::
 
 並且在 Zed 中的下方執行視窗中，可以看到你可以執行哪些指令，包括 hot reload、重啟程式、終止等，還有 DevTools 的連結
@@ -225,7 +225,7 @@ fluttermon -d <device-name>
 
 只是需要注意一下的是：如果要執行指令的話（例如：`R` 重啟程式），需要輸入對應指令字母後，按下 `Enter` 才會執行，不會像剛剛按下鍵盤上對應指令字母後就會馬上執行。
 
-### Code With AI
+### Code with AI
 AI 的部分的話有分三種：聊天、補全、直接改。
 
 聊天的話在 Zed 中按 `Cmd + Shift + P` 開啟指令框，找到 `assistant: new chat` 即可開啟聊天框
