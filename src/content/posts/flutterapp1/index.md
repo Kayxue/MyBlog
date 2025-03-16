@@ -5,7 +5,7 @@ description: 使用 Flutter 和 AI 開發第一個 App
 tags: [Flutter, WebScoket, App]
 category: Development
 draft: false
-series: "Flutter Homework"
+series: "Flutter"
 ---
 個人最近因為系上物聯網課程剛開始，所以目前有在稍微研究 WebSocket，但因為都感覺沒有什麼好用的 WebSocket Client，所以藉這次作業的機會，我決定看 AI 看能不能幫我做一個。
 
