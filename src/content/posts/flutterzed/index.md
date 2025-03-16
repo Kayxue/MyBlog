@@ -8,7 +8,7 @@ draft: false
 ---
 這個編輯器其實我已經在些許年前就聽過它了，只是因為該編輯器無法新增編輯器背景，所以才沒有用，不過隨著後來看到了 Rust 程式的強悍，而 Zed 也是使用 Rust 製作的，而且我身邊也有些人也開始選擇使用 Zed 進行程式開發，所以我也下載了下來，用了也覺得不錯。而最近也看到了部落客彼得寫了一篇文章[使用 Zed IDE 的 AI 提示寫文章](https://medium.com/%E5%BD%BC%E5%BE%97%E6%BD%98%E7%9A%84-swift-ios-app-%E9%96%8B%E7%99%BC%E6%95%99%E5%AE%A4/%E4%BD%BF%E7%94%A8-zed-ide-%E7%9A%84-ai-%E6%8F%90%E7%A4%BA%E5%AF%AB%E6%96%87%E7%AB%A0-b6840c01400d)，所以這次就來研究一下如何在 Mac 上使用 Zed 開發 Flutter 程式吧！
 ## Before You Start
-由於 Zed 目前對於 Flutter 支援沒有那麼好，所以開發體驗相對來說是不如 VSCode 系列編輯器的，並且目前 extension 部分只有 Dart 的 extension，沒有 Flutter 的 extension，所以在專案管理與執行方面等皆需要透過指令的方式進行，若無法接受，請還是先以 VScode 為主，之後支援度較高時再切換即可。
+由於 Zed 目前對於 Flutter 支援沒有那麼好，所以開發體驗相對來說是不如 VSCode 系列編輯器的，並且目前 extension 部分只有 Dart 的 extension，沒有 Flutter 的 extension，所以在安裝工具、專案建立與執行等多數動作需要透過指令的方式進行，若無法接受，請還是先以 VScode 為主，之後支援完整時再切換即可。
 ## Install Zed
 首先請前往 Zed 官網，並按下 `Download Now` 進行下載
 
