@@ -149,7 +149,7 @@ export PATH=$HOME/.gem/bin:$PATH
 這裡不用動，一樣按下一步
 ![](./androidsetup2.png)
 ![](./androidsetup3.png)
-按下右下角的 `Accept` 即可按下 `Finished` 開始安裝相關工具
+按一下右下角的 `Accept` 後，即可按下 `Finished` 開始安裝相關套件
 ![](./androidsetup4.png)
 成功安裝完成後按下 `Finished`
 ![](./androidsetup5.png)
