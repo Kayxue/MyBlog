@@ -164,7 +164,7 @@ flutter doctor --android-licenses
 
 ## Start Development
 ### Create Project
-首先我們要先建立專案。以往各位在 VSCode 開發時，基本上都會直接使用 Flutter extension 提供的指令功能直接建立專案，很少會直接使用 Flutter 的終端機指令直接建立專案，但是在 Zed 裡，由於缺乏 Flutter extension，我們只能直接使用終端機指令直接建立專案。首先先開啟終端機，切換到你想儲存專案的資料夾，然後輸入以下指令
+首先我們要先建立專案。以往各位在 VSCode 開發時，基本上都會直接使用 Flutter extension 提供的指令功能直接建立專案，很少會直接使用 Flutter 的終端機指令，但是在 Zed 裡，由於缺乏 Flutter extension，我們只能直接使用終端機指令直接建立專案。首先先開啟終端機，切換到你想儲存專案的資料夾，然後輸入以下指令
 ```bash title="Terminal"
 flutter create myapp
 ```
