@@ -1,5 +1,5 @@
 ---
-title: Flutter Development Ex－使用 Zed 的開發新體驗
+title: Flutter Ex－使用 Zed 的開發新體驗
 published: 2025-03-16
 description: 如何在 MacOS 上使用 Zed 編輯器進行 Flutter 開發
 tags: [Flutter, Zed]
