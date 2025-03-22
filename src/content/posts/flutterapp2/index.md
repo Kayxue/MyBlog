@@ -34,7 +34,7 @@ series: "Flutter"
 * `Pages`：放置頁面 (那些真正完整的頁面)
 * `Types`：放置類型 (e.g. custom enumerations)
 * `Widgets`：放置頁面上部分體積較大的 widget
-![](./Directory.png)
+![Directory Structure m-auto](./Directory.png)
 
 ## Code Explanation
 :::note

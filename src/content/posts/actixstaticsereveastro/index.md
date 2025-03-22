@@ -10,9 +10,9 @@ draft: false
 ::github{repo="Kayxue/ActixStaticServe"}
 ## Preparation
 首先，我們需要一個 Astro 靜態網站的專案，在此我以 [fuwari](https://github.com/saicaca/fuwari) 為例，打開 fuwari 的 GitHub 專案網頁後，點選右上角的 `Use this template` -> `Create a new repository`，以此 repo 為模板建立一個新的 repo。
-![RepoPage](./newrepo.png)
+![使用模板建立 repo m-auto](./newrepo.png)
 進入建立新 repo 的介面後，先確認模板是否正確，然後寫上 repo 名稱等相關資訊，確認填寫的資訊 OK 後即可點選 `Create repository` 建立 repo。
-![CreateRepo](./createrepo.png)
+![建立 repo](./createrepo.png)
 建立完成後，請打開終端機，並且使用 `cd` 指令切換到你想存放此專案的資料夾，然後輸入以下指令，將剛剛建立的 repo 複製到資料夾下：
 ```bash title="Terminal"
 git clone https://github.com/<your-username>/<repo-name>.git
@@ -204,18 +204,18 @@ git commit -am "<your-commit>"
 git push origin master
 ```
 成功推送後，即可在 GitHub 專案頁面中的 `Actions` 頁面看到剛剛新增的 GitHub Actions，並且可以看到 Actions 的執行狀態。
-![Actions](./githubactions.png)
+![Github Actions 列表](./githubactions.png)
 稍等一下，即可看到 Actions 已經成功執行完畢。
-![ActionsDone](./actionfinished.png)
+![已經成功執行完的 actions](./actionfinished.png)
 如果推送至 GitHub Container Registry，您可以在專案的 code 頁面右下角看到 image 已經成功上傳至 registry。若您是推送至 Docker Hub，請至 Docker Hub 網站確認。
-![Registry](./packagelocation.png)
+![Build 出來的 image](./packagelocation.png)
 ## Deployments
 在 build 出 image 後，最後就是在目標裝置上拉取該 image，並且執行 image 了。在此假設您已經在目標裝置上安裝 Docker，並且已經設定好 Docker 的相關設定。
 接下來請遠端連線至您的目標裝置，或者在您的目標裝置上開啟終端機，並輸入以下指令拉取 image：
 ```bash title="Terminal"
 docker pull ghcr.io/<username>/<image-name>:latest
 ```
-![PullImage](./pullimage.png)
+![拉取 Image](./pullimage.png)
 拉取完成後，即可輸入以下指令建立容器並執行 image：
 ```bash title="Terminal"
 docker run -d --name <container-name> -p 3000:3000 --restart=unless-stopped ghcr.io/<username>/<image-name>:latest
