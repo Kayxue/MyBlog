@@ -257,7 +257,7 @@ class Screenshot extends StatelessWidget {
 }
 ```
 沒錯就那麼一點點東西而已，因為只是單純顯示某個資料夾下的圖片，所以整個 widget 不會有什麼複雜的結構。
-### Students List
+### Students List Page
 專門顯示學生清單的頁面，而頁面上會以每列兩個 `StudentTile` 的方式列出學生的圖片和名字，點選各個學生的 `StudentTile` 可以查看學生的簡單介紹。頁面檔案位於 `Pages` 資料夾中。
 ```dart title="Students.dart" collapse={14-36}
 import 'package:bluearchiveintroduction/Widgets/StudentList.dart';
