@@ -484,3 +484,9 @@ class Student {
 
 ## GitHub Repository
 ::github{repo="Kayxue/BlueArchiveIntroduction"}
+
+## Image and Content Resources
+
+https://www.gamekee.com/ba/
+
+https://zh.moegirl.org.cn/
