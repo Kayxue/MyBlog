@@ -1,5 +1,5 @@
 ---
-title: Flutter App 2-Landrop App Interface Imitation
+title: Flutter App 2 - Landrop App Interface Imitation
 published: 2025-03-10
 description: 學習使用 Flutter 模仿 Landrop App 介面
 image: "./myapp/1.png"

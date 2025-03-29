@@ -1,5 +1,5 @@
 ---
-title: Flutter App 1-First App Created with Using AI
+title: Flutter App 1 - First App Created with Using AI
 published: 2025-02-25
 description: 使用 Flutter 和 AI 開發第一個 App
 tags: [Flutter, WebScoket, App]
