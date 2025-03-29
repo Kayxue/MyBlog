@@ -2,7 +2,6 @@
 title: Flutter App 3 - Blue Archinve Introduction
 published: 2025-03-29
 description: 一個小小的蔚藍檔案介紹 App
-image: "./appview.jpg"
 tags: [Flutter, Blue Archive]
 category: Development
 draft: false
