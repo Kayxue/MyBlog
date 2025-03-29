@@ -489,4 +489,4 @@ class Student {
 
 https://www.gamekee.com/ba/
 
-https://zh.moegirl.org.cn/
+萌娘百科：https://zh.moegirl.org.cn/
