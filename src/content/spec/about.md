@@ -33,7 +33,7 @@
 
 https://hyperos.mi.com/font/en/
 
-原本為 MiSans + MisansTC 雙字型（MisansTC 優先），但目前為加快載入速度，目前僅留 MisansTC。
+原本為 MiSans + MisansTC 雙字型（MisansTC 優先），但目前為加快載入速度，所以僅保留 MisansTC。
 
 ## 部落格 Github Repo
 ::github{repo="Kayxue/MyBlog"}
