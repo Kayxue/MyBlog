@@ -96,7 +96,7 @@ adb sideload <rom-image-location>/<rom-name>.zip
 刷的中途可能會出現如圖所示的畫面：
 ![](./installadditional.jpeg)
 選擇 `Yes` 即可，終端機可能會出現錯誤，不過這是正常的，沒關係。
-重新啟動至 Recovery 後，若您有想要再刷入其他的東西（例如 GApps、Magisk），可再次選擇 `Apply Update` -> `Apply from ADB` 繼續刷入其他東西。例如我想刷入 GApps 和 Magisk，則將剛剛下載到的 Magisk 安裝包副檔名改成 `.zip` 後，依序輸入以下兩個命令刷入，並且每刷完一個會重啟至 Recovery：
+重新啟動至 Recovery 後，若您有想要再刷入其他的東西（例如 GApps、Magisk），可再次選擇 `Apply Update` -> `Apply from ADB` 繼續刷入其他東西。例如我想刷入 GApps 和 Magisk，則將剛剛下載到的 Magisk 安裝包副檔名改成 `.zip` 後，依序輸入以下兩個命令刷入，並且每刷完一個就重啟至 Recovery 一次：
 ```bash title="Terminal"
 adb sideload <gapps-image-location>/<gapps-name>.zip
 adb sideload <magisk-image-location>/<magisk-installer-name>.zip
