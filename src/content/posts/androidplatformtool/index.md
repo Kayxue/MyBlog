@@ -6,7 +6,7 @@ tags: [Android, Platform Tools]
 category: App & Tools
 draft: false
 ---
-還記得從不知道什麼時候開始，改機風潮興起，不少人開始紛紛研究改機，並分享自己的改機心得與技巧，在那改機盛行的年代，不管是自訂系統主題，還是取得 root 權限，甚至刷系統，基本上網路上都可以找到不少資源。不過隨著時間推移，改機變得越來越困難，從需要解鎖 Bootloader 到解鎖 Bootloader 需要等待一週，甚至有些廠商還把 Bootloader 直接給徹底鎖起來，不讓別人解鎖了。雖然改機潮慢慢減退了，不過現在 Android Platform Tools 還是一個非常重要的工具，它可以幫助我們解鎖 Bootloader、刷入其他系統、取得 root 權限，甚至測試應用程式、更新系統等，讓我們可以更方便地管理自己的 Android 裝置。
+還記得從不知道什麼時候開始，改機風潮興起，不少人開始紛紛研究改機，並分享自己的改機心得與技巧，在那改機盛行的年代，不管是自訂系統主題，還是取得 root 權限，甚至刷系統，基本上網路上都可以找到不少資源。不過隨著時間推移，改機變得越來越困難，從需要解鎖 Bootloader 到解鎖 Bootloader 需要等待一週，甚至有些廠商還把 Bootloader 直接給徹底鎖起來，不讓別人解鎖了。雖然改機潮慢慢減退了，不過現在 Android Platform Tools 還是一個非常重要的工具，它可以幫助我們解鎖 Bootloader、刷入其他系統、取得 root 權限，甚至測試應用程式、更新系統等，讓我們管理自己的 Android 裝置可以更加方便。
 ## Download & Install
 ### Using Without Installation
 可以直接從[這裡](https://developer.android.com/tools/releases/platform-tools)下載即可，下載完成後解壓即可使用
@@ -93,7 +93,7 @@ fastboot flash boot <boot-image-location>/boot.img
 ```bash title="Terminal"
 adb sideload <rom-image-location>/<rom-name>.zip
 ```
-刷的中途中可能會出現如圖所示的畫面：
+刷的中途可能會出現如圖所示的畫面：
 ![](./installadditional.jpeg)
 選擇 `Yes` 即可，終端機可能會出現錯誤，不過這是正常的，沒關係。
 重新啟動至 Recovery 後，若您有想要再刷入其他的東西（例如 GApps、Magisk），可再次選擇 `Apply Update` -> `Apply from ADB` 繼續刷入其他東西。例如我想刷入 GApps 和 Magisk，則將剛剛下載到的 Magisk 安裝包副檔名改成 `.zip` 後，依序輸入以下兩個命令刷入，並且每刷完一個會重啟至 Recovery：
