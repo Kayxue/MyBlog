@@ -1,7 +1,7 @@
 ---
 title: IoT Final Project 1 - The Beginning
 published: 2025-04-30
-description: 物聯網課程期末專題－起步
+description: 物聯網課程期末專題的開始
 tags: [IoT, oneM2M, johnny5, nodered, flutter]
 category: Development
 draft: false
