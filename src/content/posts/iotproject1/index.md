@@ -36,7 +36,7 @@ https://nodered.org/
 ![](./nodered.jpg)
 
 ## No C Syntax-like Arduino Code?
-相信各位都知道 Arduino 基本上都是用 C++ 在 Arduino IDE 中寫程式碼然後燒錄到 Arduino 中執行吧？雖然一般用途 C++ 要寫可能問題不大，但是換到 Arduino 上，變成了 setup 與 loop 兩個 function，並且看了一下 Arduino 有給的模組，主要都是給硬體方面的，對於網路的部分其實比較難去做一個整合的動作。而在這一兩個月我也稍微看了 [IoT 沒那麼難！新手用 JavaScript 入門做自己的玩具！](https://www.books.com.tw/products/0010875992?srsltid=AfmBOorI9pLB9c0ELLlL2m7ehdEcppYfZTIHt1sPhcNpjGweKJfCDXnG)書的內容還有系列文章，了解了 [Johnny-five](https://johnny-five.io/) 這個模組，因為他提供了相關 API 讓使用者可以以 JavaScript/TypeScript 的程式碼風格與方式去操控 Arduino。而我也對 TypeScript 執行後端開發經驗是相對熟悉的，所以這次就決定採用 TypeScript 與 Johnny-five 去操作 Arduino。
+相信各位都知道 Arduino 基本上都是用像 C++ 語言的語法在 Arduino IDE 中寫程式碼，然後燒錄到 Arduino 中執行吧？雖然一般用途 C++ 要寫可能問題不大，但是換到 Arduino 上，變成了 setup 與 loop 兩個 function，並且看了一下 Arduino 有給的模組，主要都是給硬體方面的，對於網路的部分其實比較難去做一個整合的動作。而在這一兩個月我也稍微看了 [IoT 沒那麼難！新手用 JavaScript 入門做自己的玩具！](https://www.books.com.tw/products/0010875992?srsltid=AfmBOorI9pLB9c0ELLlL2m7ehdEcppYfZTIHt1sPhcNpjGweKJfCDXnG)書的內容還有系列文章，了解了 [Johnny-five](https://johnny-five.io/) 這個模組，因為他提供了相關 API 讓使用者可以以 JavaScript/TypeScript 的程式碼風格與方式去操控 Arduino。而我也對 TypeScript 執行後端開發經驗是相對熟悉的，所以這次就決定採用 TypeScript 與 Johnny-five 去操作 Arduino。
 
 ![](./johnnyfive.png)
 
