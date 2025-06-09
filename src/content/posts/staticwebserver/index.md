@@ -58,7 +58,7 @@ static-web-server
 ```
 ### Docker Run
 :::tip
-你可以在輸入值令時直接以像 `-v $HOME/my-public-dir:/public` 這樣的參數提來直接覆蓋預設的 root directory，也可以在此直接透過 cli 參數進行 Static Web Server 相關設定，設定部分稍後會再解釋。
+你可以在輸入指令時直接以像 `-v $HOME/my-public-dir:/public` 這樣的參數提來直接覆蓋預設的 root directory，也可以在此直接透過 cli 參數進行 Static Web Server 相關設定，設定部分稍後會再解釋。
 :::
 輸入以下指令即可：
 ```bash
