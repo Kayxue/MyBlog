@@ -31,7 +31,7 @@ draft: false
 
 ## Installation and Usage
 ### Directly Install
-您可以直接前往[官網](https://static-web-server.net/download-and-install/)下載壓縮檔
+您可以直接前往[官網](https://static-web-server.net/download-and-install/)下載壓縮檔  
 Linux 使用者可以透過 binary installer 直接安裝：
 ```bash
 curl --proto '=https' --tlsv1.2 -sSfL https://get.static-web-server.net | sh
