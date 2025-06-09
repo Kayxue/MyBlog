@@ -11,7 +11,7 @@ draft: false
 
 所以當時我開始尋找有什麼 Rust 寫出來的網頁伺服器，沒想到就找到了這個，而這幾個月使用下來果真覺得蠻好用的，除了打包起來很小、使用起來非常容易，並且在執行時佔用資源極低、效能優異，還保留了非常多設定，可以將 server 依據自己的需求來調整。
 
-https://static-web-server.net/
+在此附上官網：https://static-web-server.net/
 
 ## Features
 在這裡只會列舉一些，更多特色請自行前往官網查看。
@@ -31,10 +31,7 @@ https://static-web-server.net/
 
 ## Installation and Usage
 ### Directly Install
-您可以直接前往官網下載壓縮檔：
-
-https://static-web-server.net/download-and-install/
-
+您可以直接前往[官網](https://static-web-server.net/download-and-install/)下載壓縮檔
 Linux 使用者可以透過 binary installer 直接安裝：
 ```bash
 curl --proto '=https' --tlsv1.2 -sSfL https://get.static-web-server.net | sh
@@ -121,9 +118,7 @@ docker-compose up -d
 * `SERVER_DIRECTORY_LISTING`：在請求結尾為 `/` 時啟用 directory listing
 * `SERVER_CORS_ALLOW_ORIGINS`：CORS 的允許 origin 列表，預設為空，若要允許任何 host，請修改成 `*`
 
-其餘更多環境變數請參考官網
-
-https://static-web-server.net/configuration/environment-variables/
+其餘更多環境變數請參考[官網](https://static-web-server.net/configuration/environment-variables/)
 
 ### TOML
 讀取 TOML 設定預設是關閉的，若要開啟，可以透過 `-w, --config-file` 參數或者透過設定 `SERVER_CONFIG_FILE` 環境變數來提供路徑。
