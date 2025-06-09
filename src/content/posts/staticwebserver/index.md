@@ -1,6 +1,6 @@
 ---
 title: Static Web Server－跨平台、高效能的網頁伺服器
-published: 2025-05-06
+published: 2025-06-09
 description: 一個奠基於 Hyper 和 Tokio 的高效能網頁伺服器
 image: "./banner.png"
 tags: [Static Site, Hosting, Docker]
