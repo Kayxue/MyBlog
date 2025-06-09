@@ -5,7 +5,7 @@ description: 一個奠基於 Hyper 和 Tokio 的高效能網頁伺服器
 image: "./banner.png"
 tags: [Static Site, Hosting, Docker]
 category: Web
-draft: true
+draft: false
 ---
 今天要來介紹的是一個 Web Server。因為幾個月前在架這個部落格的時候，雖然覺得 actix-web 配上 actix-files 是一個不錯的選擇，但是他終究是一個後端框架，比較適合的場合是你真的需要寫一個後端的時候，如果真的是要架設一個純檔案伺服器或者完全靜態的網頁伺服器，那或許真的沒有那個必要。
 
