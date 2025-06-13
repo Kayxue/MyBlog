@@ -5,7 +5,7 @@ description: IoT 兼 Flutter 課程的期末專題
 tags: [Flutter, IoT]
 image: ./WholeSystem.png
 category: Development
-draft: true
+draft: false
 series: "Flutter"
 ---
 這學期的 Flutter 和 IoT 課程終於結束了，真的是有點不容易。雖然說在做期末專題中途發生了一些曲折，包括在中途因為時間不足以處理完整個大架構的串接，還有因為在大學，考試時間不太固定，所以在時間安排上也經常要進行調整，但是最後還是在願意放下一些東西的狀況下，成功地完成了這次的專題，最後也感謝彼得對於期末專題的開放性是如此大，可以因要跟一些其他課程結合的因素而接受需求變動。
