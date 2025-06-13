@@ -31,16 +31,30 @@ series: "Flutter"
 ![Techniques we use in the project](./Technique.png)
 
 我們使用的技術大概簡述如下：
-* **Arduino UNO**：一個義大利公司產的微控制器開發板
-* **JavaScript & Jonhhy-five**：JavaScript 是一個用於網頁的程式語言，但 Node.js 出現後，使其也可以用來開發後端。而 Johnny-five 是一個可以透過 JavaScript 來控制 Arduino 的一個 library。
-* **Flutter**：一個由 Google 公司所開發的礦平台應用程式開發框架。
-* **Docker**：一個可以幫助開發者將其應用程式打包成簡單的 image 並且可直接部署至其他裝置執行的好用工具。
+* **Arduino UNO:** 一個義大利公司產的微控制器開發板
+* **JavaScript & Jonhhy-five:** JavaScript 是一個用於網頁的程式語言，但 Node.js 出現後，使其也可以用來開發後端。而 Johnny-five 是一個可以透過 JavaScript 來控制 Arduino 的一個 library。
+* **Flutter:** 一個由 Google 公司所開發的礦平台應用程式開發框架。
+* **Docker:** 一個可以幫助開發者將其應用程式打包成簡單的 image 並且可直接部署至其他裝置執行的好用工具。
 
 ## Sensors We Use​
 這次最終有使用到的有以下感應器。
 ![Sensors we use in the project](./Sensors.png)
 
 用途簡單說明如下：
-* **IR 避障感應器**：偵測車位狀態、是否有車子要進去或離開停車場
-* **20 x 4 顯示器**：顯示停車場內的車位狀態
-* **SG90 迷你伺服馬達**：控制柵欄升降
+* **IR 避障感應器:** 偵測車位狀態、是否有車子要進去或離開停車場
+* **20 x 4 顯示器:** 顯示停車場內的車位狀態
+* **SG90 迷你伺服馬達:** 控制柵欄升降
+
+## Circuit Diagrams
+圖片的原圖來自此網站，只是因為我們本次專案不會採用變壓器供電，所以有將原圖進行修改。
+
+https://www.hackster.io/embeddedlab786/automatic-car-parking-system-95a9dc
+
+![The circuit](./Circuit.png)
+
+## System Exhibition
+由於沒有足夠的玩具車，故在此有東西拿玩具代替
+
+![No car](./System1.png)
+
+![With few cars](./System2.png)
