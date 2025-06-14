@@ -61,7 +61,7 @@ https://www.hackster.io/embeddedlab786/automatic-car-parking-system-95a9dc
 
 ## App Exhibition
 :::note
-因應 Flutter 課程作業需求，但本人平常沒用且沒有付費，所以有浮水印，請見諒。
+因應 Flutter 課程作業需求，但本人平常沒用該 APP 預覽圖製作平台，所以沒有付費，故圖片有浮水印，請見諒。
 :::
 ![App screenshots](./App.png)
 
