@@ -1,11 +1,11 @@
 ---
 title: Flutter App & IoT Final - Parking System
-published: 2025-06-13
+published: 2025-06-14
 description: IoT 兼 Flutter 課程的期末專題
 tags: [Flutter, IoT]
 image: ./WholeSystem.png
 category: Development
-draft: true
+draft: false
 series: "Flutter"
 ---
 這學期的 Flutter 和 IoT 課程終於結束了，真的是有點不容易。雖然說在做期末專題中途發生了一些曲折，包括在中途因為時間不足以處理完整個大架構的串接，還有因為在大學，考試時間不太固定，所以在時間安排上也經常要進行調整，但是最後還是在願意放下一些東西的狀況下，成功地完成了這次的專題，最後也感謝彼得對於期末專題的開放性是如此大，可以因要跟一些其他課程結合的因素而接受需求變動。
@@ -764,3 +764,31 @@ https://medium.com/%E5%BD%BC%E5%BE%97%E6%BD%98%E7%9A%84%E8%A9%A6%E7%85%89-%E5%8B
 App 其他部分展示
 <div style="position:relative; width:100%; height:0px; padding-bottom:217.687%"><iframe allow="fullscreen" allowfullscreen height="100%" src="https://streamable.com/e/vioty7?" width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"></iframe></div>
 
+## Future Improvements
+### App
+![](./AppImprove.png)
+簡單來說為以下幾點：
+* **喜愛的停車位：** 將喜歡停的停車位進行標記，並將那些停車位釘選在停車位狀態列表的最前面
+* **登入系統：** 使用者可以透過 OAuth 登入，將他們選擇的喜愛停車位紀錄上傳至雲端，並且在新裝置上登入相同的帳號，即可從雲端還原喜愛停車位紀錄
+* **顯示快取資料：** 讓 App 在離線狀態下，如果一段時間前有抓過停車場狀態資料的話，則顯示該停車場一段時間之前的狀態資料
+### Core System
+![](./CoreImprove.png)
+簡單來說為以下幾點：
+* **整合資料庫：** 目前只是將停車位資料儲存在記憶體中，但是希望未來可以整合資料庫，以避免停車場狀態紀錄遺失
+* **支援多個停車場：** 使一個系統可以同時管理多個停車場，並且可以非常容易進行設定
+* **簡易部署：** 找到將系統包成 Docker image 時，剛執行就跑出 board closed 訊息的根本原因，並且將系統重新打包成 Docker image，讓整個系統容易部署。
+
+## Summary
+這學期的兩個課程個人真的覺得非常的充實，雖然說中途遇到了一些無可避免的問題，但是最後在同學的幫助與自己的努力下，將問題都處理掉了。雖然說架構部分，沒有如願以償的將自己寫的 M2M 系統用上，然後也沒成功用上 Docker，但是整個製作下來還是可以說非常的充實。再次感謝學校有開這兩門課程，讓我們的課程有更多的選擇。最後也感謝 IT 邦幫忙鐵人賽冠軍系列文章「IoT 沒那麼難！新手用 JavaScript 入門作自己的玩具！」，讓我在這次的專題中，有信心的在 Arduino 方面選擇使用 JavaScript 作為控制 Arduino 所使用的程式語言，避開繁瑣的 `.ino` 檔案撰寫，使控制 Arduino 更加容易。
+
+https://ithelp.ithome.com.tw/users/20103130/ironman/2125?sc=hot
+
+而此系列文章也有書籍，如果想要看的話也可以考慮購買
+
+https://www.books.com.tw/products/0010875992?srsltid=AfmBOopjEck7FnykyHyCDaX6AVLdKhG1GPGdYN3i9gHBzdLJQzMpqHBS
+
+## GitHub Repository
+::github{repo="Kayxue/IoTFinalApp"}
+::github{repo="Kayxue/IoTFinalArduino"}
+原本已經寫好的簡單 M2M 系統，但是因為製作專題時間不足而廢棄
+::github{repo="Kayxue/M2MSystem"}
