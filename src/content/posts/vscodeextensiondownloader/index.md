@@ -50,3 +50,5 @@ draft: false
 這次算是 Flutter 課程上完的第一作，其實在上 Flutter 課程之前，我原本是想說使用 Tauri 開發的，但因為碰到 Tauri 的 download 模組出現問題，最後只好改用 Flutter 進行開發，原本以為會需要很久的時間才能做出來，沒想到 pub.dev 上模組蠻多的，想要做到什麼事情，基本上找一下模組通常都有，並且非常容易使用。在此非常感謝 pub.dev 上模組的多樣性，讓此軟體基礎功能可以快速完成。這軟體在製作完後，個人感覺自己下載擴充的速度更快了，不用在那邊自己還要找連結格式，自己將東西慢慢填進去，才可以下載，真的是方便了不少。
 
 ## GitHub Repository
+
+::github{repo="Kayxue/VSCodeExtensionDownloader"}
