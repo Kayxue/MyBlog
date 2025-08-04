@@ -37,6 +37,7 @@
     "astro-compress": "^2.3.8",
     "astro-expressive-code": "^0.40.2",
     "astro-icon": "^1.1.5",
+    "caniuse-lite": "^1.0.30001731",
     "hastscript": "^9.0.1",
     "katex": "^0.16.22",
     "markdown-it": "^14.1.0",
