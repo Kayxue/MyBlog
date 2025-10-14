@@ -1,7 +1,7 @@
 ---
 title: First Time Buying Keyboard on TaoBao
 published: 2025-10-14
-description: 第一次從淘寶購物的經驗
+description: 第一次從淘寶購物的體驗
 tags: [TaoBao, Shopping]
 category: Life
 draft: false
