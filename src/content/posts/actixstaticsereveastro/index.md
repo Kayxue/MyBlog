@@ -2,7 +2,7 @@
 title: ActixStaticServe 實戰－架設 Astro 靜態網站
 published: 2025-03-04
 updated: 2026-08-03
-description: 真實 使用ActixStaticServe 架設一個 Astro 靜態網站
+description: 使用 ActixStaticServe 架設一個 Astro 靜態網站
 tags: [Docker, Static Site, Hosting]
 category: Web
 draft: false
