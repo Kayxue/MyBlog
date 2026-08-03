@@ -31,11 +31,7 @@ Package manager 相關指令請依據您專案使用的 package manager 進行�
 接下來會出現是否升級確認，選擇 `Yes`
 ![](./RunningUpgrade.png)
 
-之後等待升級即可
-
-![](./RunningUpgrade.png)
-
-如果畫面如下圖所示，即升級完成
+之後等待升級即可。當出現如下圖畫面時，即升級完成
 
 ![](./UpgradeCommandFinish.png)
 
