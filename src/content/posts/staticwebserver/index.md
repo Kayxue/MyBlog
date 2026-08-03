@@ -1,6 +1,7 @@
 ---
 title: Static Web Server－跨平台、高效能的網頁伺服器
 published: 2025-06-09
+updated: 2026-08-03
 description: 一個奠基於 Hyper 和 Tokio 的高效能網頁伺服器
 image: "./banner.png"
 tags: [Static Site, Hosting, Docker]
@@ -425,7 +426,7 @@ WORKDIR /
 COPY --from=builder /app/dist/ ./public/
 ```
 :::warning
-如果您的專案被限制使用 `pnpm`（例如 fuwari），請使用 node image 進行建置，詳細請參考 pnpm 官方文件的 [Working with Docker](https://pnpm.io/docker)
+如果您的專案被限制使用 `pnpm`（例如 fuwari），詳細請參考 pnpm 官方文件的 [Working with Docker](https://pnpm.io/docker)
 :::
 :::note
 如果你想要你的 fuwari 專案「脫 pnpm 入 bun」可參考[此文章](/posts/actixstaticsereveastro/)的「Preparation」一節

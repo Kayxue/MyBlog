@@ -1,6 +1,7 @@
 ---
 title: ActixStaticServe 實戰－架設 Astro 靜態網站
 published: 2025-03-04
+updated: 2026-08-03
 description: 真實 使用ActixStaticServe 架設一個 Astro 靜態網站
 tags: [Docker, Static Site, Hosting]
 category: Web
@@ -148,9 +149,7 @@ COPY --from=builder /app/dist/ ./public/
 * `13` 行：將第一個階段建置好的靜態網頁複製至 `/public` 資料夾。
 :::
 :::warning
-若您使用 pnpm 作為 package manager：
-* 您可以使用與上方範例一樣邏輯進行處理，但是因為目前尚未有 pnpm 的 Docker image，所以請使用 [node](https://hub.docker.com/_/node) image 進行建置。
-* 撰寫 dockerfile 時，請特別留意 pnpm 在 [node](https://hub.docker.com/_/node) image 中的使用方式，詳細請參考 pnpm 官方文件的 [Working with Docker](https://pnpm.io/docker)
+若您使用 pnpm 作為 package manager，詳細請參考 pnpm 官方文件的 [Working with Docker](https://pnpm.io/docker)
 :::
 ## Writeing GitHub Actions
 再來就是撰寫 GitHub Actions 的部分，請在專案根目錄下建立 `.github/workflows` 資料夾，並在資料夾中建立 `publish.yml` 檔案，然後輸入以下內容：
