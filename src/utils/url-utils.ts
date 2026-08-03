@@ -30,6 +30,23 @@ export function getDir(path: string): string {
   return path.substring(0, lastSlashIndex + 1)
 }
 
+export function getPostDir(entry: { filePath?: string; id: string }): string {
+  if (entry.filePath) {
+    const parts = entry.filePath.replace(/\\/g, '/').split('/')
+    parts.pop()
+    const srcIndex = parts.indexOf('src')
+    if (srcIndex >= 0) {
+      return parts.slice(srcIndex + 1).join('/')
+    }
+    return parts.join('/')
+  }
+  const lastSlashIndex = entry.id.lastIndexOf('/')
+  if (lastSlashIndex < 0) {
+    return 'content/posts'
+  }
+  return `content/posts/${entry.id.substring(0, lastSlashIndex)}`
+}
+
 export function url(path: string) {
   return joinUrl('', import.meta.env.BASE_URL, path)
 }

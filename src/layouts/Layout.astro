@@ -485,14 +485,16 @@ function createPhotoSwipe() {
 		imageClickAction: 'close',
 		tapAction: 'close',
 		doubleTapAction: 'zoom',
+		maxZoomLevel: 3,
+		secondaryZoomLevel: 2,
 	})
 
 	lightbox.addFilter("domItemData", (itemData, element) => {
 		if (element instanceof HTMLImageElement) {
 			itemData.src = element.src
 
-			itemData.w = Number(element.naturalWidth || window.innerWidth)
-			itemData.h = Number(element.naturalHeight || window.innerHeight)
+			itemData.w = Number(element.naturalWidth || 2500)
+			itemData.h = Number(element.naturalHeight || 1800)
 
 			itemData.msrc = element.src
 		}

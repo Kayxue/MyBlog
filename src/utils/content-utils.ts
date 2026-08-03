@@ -15,11 +15,11 @@ export async function getSortedPosts() {
   })
 
   for (let i = 1; i < sorted.length; i++) {
-    sorted[i].data.nextSlug = sorted[i - 1].slug
+    sorted[i].data.nextSlug = sorted[i - 1].id.replace(/\.md$/, '')
     sorted[i].data.nextTitle = sorted[i - 1].data.title
   }
   for (let i = 0; i < sorted.length - 1; i++) {
-    sorted[i].data.prevSlug = sorted[i + 1].slug
+    sorted[i].data.prevSlug = sorted[i + 1].id.replace(/\.md$/, '')
     sorted[i].data.prevTitle = sorted[i + 1].data.title
   }
 
@@ -86,13 +86,13 @@ export async function getCategoryList(): Promise<Category[]> {
 
 export async function getPostSeries(
   seriesName: string,
-): Promise<{ body: string; data: BlogPostData; slug: string }[]> {
+): Promise<{ body?: string; data: BlogPostData; id: string }[]> {
   const posts = (await getCollection('posts', ({ data }) => {
     return (
       (import.meta.env.PROD ? data.draft !== true : true) &&
       data.series === seriesName
     )
-  })) as unknown as { body: string; data: BlogPostData; slug: string }[]
+  })) as unknown as { body?: string; data: BlogPostData; id: string }[]
 
   posts.sort((a, b) => {
     const dateA = new Date(a.data.published)

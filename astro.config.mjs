@@ -27,8 +27,10 @@ import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 import remarkGfm from "remark-gfm";
 import remarkFigureCaption from "@microflash/remark-figure-caption";
 import remarkImageAttr from "./src/plugins/remark-image-attr.js";
+import remarkLinkCard from "./src/plugins/remark-link-card.ts";
 
 import yaml from "@rollup/plugin-yaml";
+import { unified } from "@astrojs/markdown-remark";
 import expressiveCode from "astro-expressive-code";
 
 // https://astro.build/config
@@ -101,58 +103,61 @@ export default defineConfig({
     }),
   ],
   markdown: {
-    remarkPlugins: [
-      remarkMath,
-      remarkReadingTime,
-      remarkExcerpt,
-      remarkGithubAdmonitionsToDirectives,
-      remarkDirective,
-      remarkSectionize,
-      parseDirectiveNode,
-      remarkFigureCaption,
-      remarkGfm,
-      remarkImageAttr,
-    ],
-    rehypePlugins: [
-      rehypeKatex,
-      rehypeSlug,
-      [
-        rehypeComponents,
-        {
-          components: {
-            github: GithubCardComponent,
-            note: (x, y) => AdmonitionComponent(x, y, "note"),
-            tip: (x, y) => AdmonitionComponent(x, y, "tip"),
-            important: (x, y) => AdmonitionComponent(x, y, "important"),
-            caution: (x, y) => AdmonitionComponent(x, y, "caution"),
-            warning: (x, y) => AdmonitionComponent(x, y, "warning"),
-          },
-        },
+    processor: unified({
+      remarkPlugins: [
+        remarkMath,
+        remarkReadingTime,
+        remarkExcerpt,
+        remarkGithubAdmonitionsToDirectives,
+        remarkDirective,
+        [remarkLinkCard, { internalLink: { enabled: true, site: "https://blog.kayxue.dev/" }, base: "/" }],
+        remarkSectionize,
+        parseDirectiveNode,
+        remarkFigureCaption,
+        remarkGfm,
+        remarkImageAttr,
       ],
-      [
-        rehypeAutolinkHeadings,
-        {
-          behavior: "append",
-          properties: {
-            className: ["anchor"],
-          },
-          content: {
-            type: "element",
-            tagName: "span",
-            properties: {
-              className: ["anchor-icon"],
-              "data-pagefind-ignore": true,
+      rehypePlugins: [
+        rehypeKatex,
+        rehypeSlug,
+        [
+          rehypeComponents,
+          {
+            components: {
+              github: GithubCardComponent,
+              note: (x, y) => AdmonitionComponent(x, y, "note"),
+              tip: (x, y) => AdmonitionComponent(x, y, "tip"),
+              important: (x, y) => AdmonitionComponent(x, y, "important"),
+              caution: (x, y) => AdmonitionComponent(x, y, "caution"),
+              warning: (x, y) => AdmonitionComponent(x, y, "warning"),
             },
-            children: [
-              {
-                type: "text",
-                value: "#",
-              },
-            ],
           },
-        },
+        ],
+        [
+          rehypeAutolinkHeadings,
+          {
+            behavior: "append",
+            properties: {
+              className: ["anchor"],
+            },
+            content: {
+              type: "element",
+              tagName: "span",
+              properties: {
+                className: ["anchor-icon"],
+                "data-pagefind-ignore": true,
+              },
+              children: [
+                {
+                  type: "text",
+                  value: "#",
+                },
+              ],
+            },
+          },
+        ],
       ],
-    ],
+    }),
   },
   image: {
     service: {
@@ -164,6 +169,7 @@ export default defineConfig({
   },
   vite: {
     build: {
+      cssMinify: "esbuild",
       rollupOptions: {
         onwarn(warning, warn) {
           // temporarily suppress this warning
