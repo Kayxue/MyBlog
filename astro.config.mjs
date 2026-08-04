@@ -1,3 +1,4 @@
+import { readFileSync } from "fs";
 import sitemap from "@astrojs/sitemap";
 import svelte from "@astrojs/svelte";
 import tailwind from "@astrojs/tailwind";
@@ -32,6 +33,8 @@ import remarkLinkCard from "./src/plugins/remark-link-card.ts";
 import yaml from "@rollup/plugin-yaml";
 import { unified } from "@astrojs/markdown-remark";
 import expressiveCode from "astro-expressive-code";
+
+import takumi, { presets } from "astro-takumi";
 
 // https://astro.build/config
 export default defineConfig({
@@ -101,6 +104,13 @@ export default defineConfig({
     fuwariLinkCard({
       internalLink: { enabled: true },
     }),
+    takumi({
+      options: {
+        fonts: [readFileSync(`public/fonts/MisansTC-Regular.woff2`)],
+        format: "webp",
+      },
+      render: presets.simpleBlog,
+    }),
   ],
   markdown: {
     processor: unified({
@@ -110,7 +120,13 @@ export default defineConfig({
         remarkExcerpt,
         remarkGithubAdmonitionsToDirectives,
         remarkDirective,
-        [remarkLinkCard, { internalLink: { enabled: true, site: "https://blog.kayxue.dev/" }, base: "/" }],
+        [
+          remarkLinkCard,
+          {
+            internalLink: { enabled: true, site: "https://blog.kayxue.dev/" },
+            base: "/",
+          },
+        ],
         remarkSectionize,
         parseDirectiveNode,
         remarkFigureCaption,

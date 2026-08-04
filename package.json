@@ -38,6 +38,7 @@
     "astro-compress": "^2.3.8",
     "astro-expressive-code": "^0.44.1",
     "astro-icon": "^1.1.5",
+    "astro-takumi": "^2.0.1",
     "baseline-browser-mapping": "^2.11.12",
     "caniuse-lite": "^1.0.30001806",
     "hastscript": "^9.0.1",
@@ -81,6 +82,7 @@
     "@types/sanitize-html": "^2.16.0",
     "postcss-import": "^16.1.1",
     "postcss-nesting": "^13.0.2",
+    "react": "^19.2.8",
     "remark-gfm": "^4.0.1"
   },
   "trustedDependencies": [

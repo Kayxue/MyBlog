@@ -17,6 +17,7 @@ import {
 } from '../constants/constants'
 import { defaultFavicons } from '../constants/icon'
 import type { Favicon } from '../types/config'
+import { getImagePath } from 'astro-takumi'
 import { url, pathsEqual } from '../utils/url-utils'
 import 'katex/dist/katex.css'
 
@@ -54,6 +55,8 @@ if (title) {
   pageTitle = `${siteConfig.title} - ${siteConfig.subtitle}`
 }
 
+let ogTitle = title ?? pageTitle
+
 const favicons: Favicon[] =
   siteConfig.favicon.length > 0 ? siteConfig.favicon : defaultFavicons
 
@@ -70,6 +73,8 @@ const bannerOffsetByPosition = {
 }
 const bannerOffset =
   bannerOffsetByPosition[siteConfig.banner.position || 'center']
+
+const openGraphImageUrl = getImagePath({ url: Astro.url, site: Astro.site, format: "webp" })
 ---
 
 <!DOCTYPE html>
@@ -86,18 +91,20 @@ const bannerOffset =
 
 		<meta property="og:site_name" content={siteConfig.title}>
 		<meta property="og:url" content={Astro.url}>
-		<meta property="og:title" content={pageTitle}>
+		<meta property="og:title" content={ogTitle}>
 		<meta property="og:description" content={description || pageTitle}>
 		{setOGTypeArticle ? (
         <meta property="og:type" content="article" />
         ) : (
         <meta property="og:type" content="website" />
         )}
+		<meta property="og:image" content={openGraphImageUrl} />
 
 		<meta name="twitter:card" content="summary_large_image">
 		<meta property="twitter:url" content={Astro.url}>
 		<meta name="twitter:title" content={pageTitle}>
 		<meta name="twitter:description" content={description || pageTitle}>
+		<meta name="twitter:image" content={openGraphImageUrl} />
 
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
