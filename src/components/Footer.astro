@@ -16,48 +16,5 @@ const currentYear = new Date().getFullYear()
         Powered by&nbsp;
         <a class="transition link text-[var(--primary)] font-medium" target="_blank" href="https://astro.build">Astro</a> &&nbsp;
         <a class="transition link text-[var(--primary)] font-medium" target="_blank" href="https://github.com/saicaca/fuwari">Fuwari</a>
-        <br>
-        <span>本<span style=" color: hsl(192 98% 55%); font-weight: bold; ">頁面</span>閱覽次數：<span id="busuanzi_page_pv" style=" color: hsl(192 98% 55%); font-weight: bold; ">--</span> 次 | 👀總共閱覽：<span id="busuanzi_site_pv" style=" color: hsl(192 98% 55%); font-weight: bold; ">--</span> 次 | 總訪客人數：<span id="busuanzi_site_uv" style=" color: hsl(192 98% 55%); font-weight: bold; ">--</span> 人</span>
-        <br>
     </div>
 </div>
-
-<script>
-    function fetchBusuanzi() {
-        fetch('https://cdn.busuanzi.cc/api.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                url: window.location.href,
-                referrer: document.referrer
-            })
-        })
-        .then(res => res.json())
-        .then(data => {
-            for (const key in data) {
-                const el = document.getElementById(key);
-                if (el) {
-                    el.innerText = data[key];
-                }
-            }
-        })
-        .catch(err => {
-            console.warn('Busuanzi fetch error:', err);
-        });
-    }
-
-    function setupBusuanzi() {
-        fetchBusuanzi();
-        if (window.swup?.hooks) {
-            window.swup.hooks.on('page:view', fetchBusuanzi);
-        } else {
-            document.addEventListener('swup:enable', () => {
-                window.swup?.hooks?.on('page:view', fetchBusuanzi);
-            }, { once: true });
-        }
-    }
-
-    setupBusuanzi();
-</script>
