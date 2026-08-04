@@ -29,9 +29,9 @@
         "astro-compress": "^2.3.8",
         "astro-expressive-code": "^0.44.1",
         "astro-icon": "^1.1.5",
+        "astro-takumi-fork": "^2.0.3",
         "baseline-browser-mapping": "^2.11.12",
         "caniuse-lite": "^1.0.30001806",
-        "astro-takumi": "github:Kayxue/astro-takumi",
         "hastscript": "^9.0.1",
         "katex": "^0.16.25",
         "markdown-it": "^14.1.0",
@@ -895,7 +895,7 @@
 
     "astro-icon": ["astro-icon@1.1.5", "", { "dependencies": { "@iconify/tools": "^4.0.5", "@iconify/types": "^2.0.0", "@iconify/utils": "^2.1.30" } }, "sha512-CJYS5nWOw9jz4RpGWmzNQY7D0y2ZZacH7atL2K9DeJXJVaz7/5WrxeyIxO8KASk1jCM96Q4LjRx/F3R+InjJrw=="],
 
-    "astro-takumi": ["astro-takumi@github:Kayxue/astro-takumi#a55224b", { "dependencies": { "@takumi-rs/core": "^2.0.2", "@takumi-rs/helpers": "^2.0.2", "jsdom": "^30.0.0", "react": "^19.2.7" } }, "Kayxue-astro-takumi-a55224b", "sha512-OPpxxfcsMkrwY8pa1VuF+6TEsLvD/EbKmnWg9UFjtGbhx0GEi65NosJtUfTM9wsB6O/6df68h2slsR+xfvnVoQ=="],
+    "astro-takumi-fork": ["astro-takumi-fork@2.0.3", "", { "dependencies": { "@takumi-rs/core": "^2.5.6", "@takumi-rs/helpers": "^2.5.6", "jsdom": "^30.0.1", "react": "^19.2.8" } }, "sha512-lP+aFlKwc+760EgxowgtP0F3MRDASqSid7mrrYbQ8sPVETztzFIE0Dz6+Do61b56byExCMl1RIaZ62yBlIvWbw=="],
 
     "async": ["async@3.2.6", "", {}, "sha512-htCUDlxyyCLMgaM3xXg0C0LW2xqfuQ6p05pCEIsXuyQ+a1koYKTuBMzRNwmybfLgvJDMd0r1LTn4+E0Ti6C2AA=="],
 

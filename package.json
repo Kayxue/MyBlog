@@ -38,7 +38,7 @@
     "astro-compress": "^2.3.8",
     "astro-expressive-code": "^0.44.1",
     "astro-icon": "^1.1.5",
-    "astro-takumi": "github:Kayxue/astro-takumi",
+    "astro-takumi-fork": "^2.0.3",
     "baseline-browser-mapping": "^2.11.12",
     "caniuse-lite": "^1.0.30001806",
     "hastscript": "^9.0.1",

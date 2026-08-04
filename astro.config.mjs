@@ -34,7 +34,7 @@ import yaml from "@rollup/plugin-yaml";
 import { unified } from "@astrojs/markdown-remark";
 import expressiveCode from "astro-expressive-code";
 
-import takumi, { presets } from "astro-takumi";
+import takumi, { presets } from "astro-takumi-fork";
 
 // https://astro.build/config
 export default defineConfig({
