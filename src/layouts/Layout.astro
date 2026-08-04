@@ -20,6 +20,7 @@ import type { Favicon } from '../types/config'
 import { getImagePath } from 'astro-takumi'
 import { url, pathsEqual } from '../utils/url-utils'
 import 'katex/dist/katex.css'
+import { decode } from 'astro:schema'
 
 interface Props {
   title?: string
@@ -74,7 +75,7 @@ const bannerOffsetByPosition = {
 const bannerOffset =
   bannerOffsetByPosition[siteConfig.banner.position || 'center']
 
-const openGraphImageUrl = encodeURI(getImagePath({ url: Astro.url, site: Astro.site, format: "webp" }))
+const openGraphImageUrl = decodeURI(getImagePath({ url: Astro.url, site: Astro.site, format: "webp" }))
 ---
 
 <!DOCTYPE html>
