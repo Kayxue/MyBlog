@@ -67,9 +67,9 @@ static-web-server
 :::
 輸入以下指令即可：
 ```bash
-docker run --rm -it -p 80:80 joseluisq/static-web-server:<tag> -g info
+docker run --rm -it -p 80:8787 joseluisq/static-web-server:<tag> -g info
 # Or
-docker run --rm -it -p 80:80 ghcr.io/static-web-server/static-web-server:<tag> -g info
+docker run --rm -it -p 80:8787 ghcr.io/static-web-server/static-web-server:<tag> -g info
 ```
 `<tag>` 部分會依據你想使用的 image 而不同，對照如下：
 * Scratch: `latest`、`<version>`
