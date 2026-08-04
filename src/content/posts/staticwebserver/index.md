@@ -103,7 +103,7 @@ services:
     image: joseluisq/static-web-server:<tag>
     container_name: "website"
     ports:
-      - 80:80
+      - 80:8787
     restart: unless-stopped
     environment:
       # Note: those envs are customizable but also optional
@@ -123,7 +123,7 @@ docker-compose up -d
 更改 Static Web Server 相關設定最通用的一種方式就是修改環境變數，這方法不管是 Linux、MacOS 或者 Windows 都可以使用。
 
 裡面個人最常會設定的環境變數如下：
-* `SERVER_HOST`、`SERVER_PORT`：host 與端口，預設為 `[::]` 與 `80`
+* `SERVER_HOST`、`SERVER_PORT`：host 與端口，預設為 `[::]` 與 `8787`
 * `SERVER_ROOT`：靜態網站檔案的根目錄，絕對或相對路徑皆可
 * `SERVER_DIRECTORY_LISTING`：在請求結尾為 `/` 時啟用 directory listing
 * `SERVER_CORS_ALLOW_ORIGINS`：CORS 的允許 origin 列表，預設為空，若要允許任何 host，請修改成 `*`
@@ -284,7 +284,7 @@ SUBCOMMANDS:
 
 #### Address & Root dir
 host = "::"
-port = 80
+port = 8787
 root = "./public"
 
 #### Logging
