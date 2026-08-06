@@ -31,7 +31,7 @@ https://zed.dev/
 ### Flutter SDK
 首先先前往這裡的約中間處下載 Flutter SDK 壓縮檔
 
-https://docs.flutter.dev/get-started/install/macos/mobile-ios#install-the-flutter-sdk
+https://docs.flutter.dev/install/manual
 
 ![](./downloadflutter.png)
 
